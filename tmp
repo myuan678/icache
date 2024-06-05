@@ -1,0 +1,7 @@
+module tag_ram #(
+    parameter TAG_WIDTH = 18
+)(
+    input clk,
+    input rst_n,
+    
+)
