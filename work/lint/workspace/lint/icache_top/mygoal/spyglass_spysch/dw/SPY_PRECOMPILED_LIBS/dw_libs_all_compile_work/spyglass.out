@@ -1,0 +1,63 @@
+
+                        SpyGlass Predictive Analyzer (R)
+                              Synopsys TestMAX(TM)
+
+                Version T-2022.06-1 for linux64 - Jul 23, 2022 
+
+                    Copyright (c) 2001 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+INFO [SPG#1044]: Running in batch mode...
+
+Precompiling DW Libraries ..... 
+
+
+RULE-CHECKING IN VHDL MODE
+Loading spyglass (SpyGlass_vT-2022.06-1) ... (picked from /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/policies/spyglass)
+
+INFO [75]    Creating the Work Directory '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/SPY_DW_WORK/SPY_PRECOMPILED_LIBS/DW_LIBS_ALL/64' for 64bit  precompiled dump.
+Checking Rule PrecompileLibCheck01 (Rule 1 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck02 (Rule 2 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck03 (Rule 3 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck04 (Rule 4 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AbstractInterface (Rule 5 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port06 (Rule 6 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port14 (Rule 7 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port15 (Rule 8 of total 50) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port18 (Rule 9 of total 50) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule CMD_ignorelibs01 (Rule 10 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportRuleNotRun (Rule 11 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw02/src/DW02_components.vhd" ...
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw01/src/DW01_components.vhd" ...
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw03/src/DW03_components.vhd" ...
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw04/src/DW04_components.vhd" ...
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw06/src/DW06_components.vhd" ...
+ Analyzing input file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw05/src/DW05_components.vhd" ...
+Checking Rule SortVhdlFiles (Rule 12 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportCheckDataSummary (Rule 13 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportCheckDataSummary (Rule 13 of total 50) .... done (Time = 0.00s, Memory = 0.0K)
+
+Generating data for Console...
+
+Generating moresimple report from '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/spyglass.vdb' to '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/spyglass_reports/moresimple.rpt' ....
+
+Generating no_msg_reporting_rules report from '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/spyglass.vdb' to '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/spyglass_reports/no_msg_reporting_rules.rpt' ....
+
+Policy specific data (reports) are present in the directory '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/spyglass_reports'.
+
+SpyGlass critical reports for the current run are present in directory '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dw_libs_all_compile_work/consolidated_reports/'.
+SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)

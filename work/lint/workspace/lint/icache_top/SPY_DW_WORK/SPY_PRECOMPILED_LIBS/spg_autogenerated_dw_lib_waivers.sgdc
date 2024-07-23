@@ -1,0 +1,9 @@
+
+#file_type internal
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/*.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw02/src/DW0*_components.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw01/src/DW0*_components.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw03/src/DW0*_components.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw04/src/DW0*_components.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw06/src/DW0*_components.vhd" --delete_internal_use_only
+waive -file "/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw/dw05/src/DW0*_components.vhd" --delete_internal_use_only

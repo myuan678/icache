@@ -1,0 +1,5 @@
+-1 "SortVhdlFiles" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"

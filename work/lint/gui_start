@@ -1,0 +1,2 @@
+#!/bin/csh -f
+spyglass -project /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint.prj &

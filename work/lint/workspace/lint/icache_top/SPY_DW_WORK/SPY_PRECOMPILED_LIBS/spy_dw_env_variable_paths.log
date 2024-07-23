@@ -1,0 +1,7 @@
+SPYGLASS_DC_PATH:NULL
+SPYGLASS_HOME:/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME
+SPYGLASS_EXE_PATH:NULL
+SPYGLASS_DC_DWARE_FILES_PATH:/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware
+SPYGLASS_DC_DW_FILES_PATH:/tools/software/synopsys/syn/T-2022.03-SP2/bin/../dw
+SPYGLASS_VERSION:SpyGlass_vT-2022.06-1
+DC_VERSION:dc_shell version    -  T-2022.03-SP2

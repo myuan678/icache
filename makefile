@@ -1,10 +1,15 @@
-RTL_COMPILE_OUTPUT 	= /home/xuemengyuan/try/cache/work/rtl_compile
+RTL_COMPILE_OUTPUT 	= /home/xuemengyuan/try/cache_v1/icache/work/rtl_compile
 
 .PHONY: compile lint
 
 compile:
 	mkdir -p $(RTL_COMPILE_OUTPUT)
-	cd $(RTL_COMPILE_OUTPUT) ;vcs -kdb -full64 -debug_access -sverilog -f /home/xuemengyuan/try/cache/filelist.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM
+	cd $(RTL_COMPILE_OUTPUT) ;vcs -kdb -full64 -debug_access -sverilog -f /home/xuemengyuan/try/cache_v1/icache/icache_filelist.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM
+
+
+
+ver:
+	verilator -f icache_filelist.f
 
 # wsl compile
 comp:

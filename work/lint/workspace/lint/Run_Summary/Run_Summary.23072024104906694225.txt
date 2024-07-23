@@ -1,0 +1,15 @@
+Date Created     : 23-07-2024 10:49:06
+SpyGlass Version : SpyGlass_vT-2022.06-1
+Project Name     : lint
+Goal Name        : mygoal
+Scenario Name    : default_scenario
+Top              : icache_top
+
+Message Summary
+Severity   Non-Waived  Waived
+FATAL           6         0
+ERROR           2         0
+WARNING        16         0
+INFO            6         0
+
+-dashboard_data sync_crossings 

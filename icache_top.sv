@@ -11,24 +11,21 @@ module icache_top
     //upstream rxreq
     input  logic                                        upstream_rxreq_vld          ,
     output logic                                        upstream_rxreq_rdy          ,
-    input  logic [ICACHE_REQ_OPCODE_WIDTH-1:0]          upstream_rxreq_opcode       ,
-    input  logic [ICACHE_REQ_TXNID_WIDTH-1:0]           upstream_rxreq_txnid        ,
-    input  req_addr_t                                   upstream_rxreq_addr         ,
+    input  pc_req_t                                     upstream_rxreq_pld          ,
 
     //downstream rxsnp
     input  logic                                        downstream_rxsnp_vld        ,
     output logic                                        downstream_rxsnp_rdy        ,
-    input  logic [ICACHE_REQ_OPCODE_WIDTH-1:0]          downstream_rxsnp_opcode     ,
-    input  logic [ICACHE_REQ_TXNID_WIDTH-1:0]           downstream_rxsnp_txnid      ,
-    input  req_addr_t                                   downstream_rxsnp_addr       ,
+    input  pc_req_t                                     downstream_rxsnp_pld        ,
+
 
     //downtream txreq
     output logic                                        downstream_txreq_vld        ,
     input  logic                                        downstream_txreq_rdy        ,
-    output logic [ICACHE_REQ_OPCODE_WIDTH-1:0]          downstream_txreq_opcode     ,
-    output logic [ICACHE_REQ_TXNID_WIDTH-1:0]           downstream_txreq_txnid      ,
+    output pc_req_t                                     downstream_txreq_pld        ,
+
     output logic [ICACHE_INDEX_WIDTH-1:0]               downstream_txreq_index      ,
-    output req_addr_t                                   downstream_txreq_addr       ,
+
 
     //downstream txrsp
     input  logic                                        downstream_txrsp_vld        ,
@@ -38,23 +35,19 @@ module icache_top
     //downstream rxdat  in
     input  logic                                        downstream_rxdat_vld        ,
     output logic                                        downstream_rxdat_rdy        ,
-    input  logic [ICACHE_REQ_OPCODE_WIDTH-1:0]          downstream_rxdat_opcode     ,
-    input  logic [ICACHE_REQ_TXNID_WIDTH-1:0]           downstream_rxdat_txnid      ,
-    input  logic [ICACHE_DOWNSTREAM_DATA_WIDTH-1:0]     downstream_rxdat_data       
+    input  downstream_rxdat_t                           downstream_rxdat_pld           
 );
 
     logic                                               prefetch_req_vld            ;
     logic                                               prefetch_req_rdy            ;
-    req_addr_t                                          prefetch_req_addr           ;
-    logic [ICACHE_REQ_OPCODE_WIDTH-1:0]                 prefetch_req_opcode         ;
+    pc_req_t                                            prefetch_req_pld            ;   
 
     logic                                               tag_req_vld                 ;
     logic                                               tag_req_rdy                 ;
     logic                                               tagram_req_rdy              ;
     logic                                               mshr_tag_req_rdy            ;
-    req_addr_t                                          tag_req_addr                ;
-    logic [ICACHE_REQ_OPCODE_WIDTH-1:0]                 tag_req_opcode              ;
-    logic [ICACHE_REQ_TXNID_WIDTH-1:0]                  tag_req_txnid               ;
+    pc_req_t                                            tag_req_pld                 ;
+    
 
     logic                                               tag_miss                    ;
     logic [WAY_NUM-1:0]                                 tag_hit                     ;
@@ -78,25 +71,18 @@ module icache_top
         .clk                        (clk                        ),
         .rst_n                      (rst_n                      ),
         .upstream_rxreq_vld         (upstream_rxreq_vld         ),     
-        .upstream_rxreq_rdy         (upstream_rxreq_rdy         ),     
-        .upstream_rxreq_opcode      (upstream_rxreq_opcode      ),     
-        .upstream_rxreq_txnid       (upstream_rxreq_txnid       ),     
-        .upstream_rxreq_addr        (upstream_rxreq_addr        ),     
+        .upstream_rxreq_rdy         (upstream_rxreq_rdy         ),    
+        .upstream_rxreq_pld         (upstream_rxreq_pld         ),        
         .downstream_rxsnp_vld       (downstream_rxsnp_vld       ),     
-        .downstream_rxsnp_rdy       (downstream_rxsnp_rdy       ),     
-        .downstream_rxsnp_txnid     (downstream_rxsnp_txnid     ),
-        .downstream_rxsnp_opcode    (downstream_rxsnp_opcode    ),     
-        .downstream_rxsnp_addr      (downstream_rxsnp_addr      ),     
+        .downstream_rxsnp_rdy       (downstream_rxsnp_rdy       ), 
+        .downstream_rxsnp_pld       (downstream_rxsnp_pld       ),             
         .prefetch_req_vld           (prefetch_req_vld           ), 
         .prefetch_req_rdy           (prefetch_req_rdy           ), 
-        .prefetch_req_opcode        (prefetch_req_opcode        ),
-        .prefetch_req_addr          (prefetch_req_addr          ), 
+        .prefetch_req_pld           (prefetch_req_pld           ),  
         .tag_req_vld                (tag_req_vld                ),    
         .tagram_req_rdy             (tagram_req_rdy             ), 
         .mshr_tag_req_rdy           (mshr_tag_req_rdy           ),   
-        .tag_req_addr               (tag_req_addr               ),    
-        .tag_req_opcode             (tag_req_opcode             ),    
-        .tag_req_txnid              (tag_req_txnid              )
+        .tag_req_pld                (tag_req_pld                )    
     );
 
     icache_tag_array_ctrl u_icache_tag_array_ctrl (
@@ -104,9 +90,7 @@ module icache_top
         .rst_n                      (rst_n                      ),
         .tag_req_vld                (tag_req_vld                ),
         .tagram_req_rdy             (tagram_req_rdy             ),
-        .tag_req_addr               (tag_req_addr               ),
-        .tag_req_opcode             (tag_req_opcode             ),
-        .tag_req_txnid              (tag_req_txnid              ),
+        .tag_req_pld                (tag_req_pld                ),
         .tag_miss                   (tag_miss                   ),
         .tag_hit                    (tag_hit                    ),
         .lru_pick                   (lru_pick                   ),
@@ -118,9 +102,7 @@ module icache_top
         .rst_n                      (rst_n                      ),
         .tag_req_vld                (tag_req_vld                ),
         .mshr_tag_req_rdy           (mshr_tag_req_rdy           ),
-        .tag_req_addr               (tag_req_addr               ),
-        .tag_req_opcode             (tag_req_opcode             ),
-        .tag_req_txnid              (tag_req_txnid              ),
+        .tag_req_pld                (tag_req_pld                ),
         .tag_hit                    (tag_hit                    ),
         .tag_miss                   (tag_miss                   ),
         .lru_pick                   (lru_pick                   ),
@@ -133,14 +115,11 @@ module icache_top
         .dataram_rd_index           (dataram_rd_index           ),
         .downstream_txreq_vld       (downstream_txreq_vld       ),
         .downstream_txreq_rdy       (downstream_txreq_rdy       ),
-        .downstream_txreq_opcode    (downstream_txreq_opcode    ),
-        .downstream_txreq_txnid     (downstream_txreq_txnid     ),
-        .downstream_txreq_addr      (downstream_txreq_addr      ),
+        .downstream_txreq_pld       (downstream_txreq_pld       ),
         .downstream_txreq_index     (downstream_txreq_index     ),
         .downstream_txrsp_vld       (downstream_txrsp_vld       ),
         .downstream_txrsp_rdy       (downstream_txrsp_rdy       ),
         .downstream_txrsp_opcode    (downstream_txrsp_opcode    ),
-        //.mshr_entry_linefill_msg    (mshr_entry_linefill_msg    ),
         .v_mshr_entry_array         (v_mshr_entry_array         ),
         .linefill_ack_index         (mshr_linefill_done_idx     ),
         .linefill_done              (linefill_done              )
@@ -161,10 +140,8 @@ module icache_top
      
         .downstream_rxdat_vld       (downstream_rxdat_vld       ),
         .downstream_rxdat_rdy       (downstream_rxdat_rdy       ),
-        .downstream_rxdat_opcode    (downstream_rxdat_opcode    ),
+        .downstream_rxdat_pld       (downstream_rxdat_pld       ),
         .downstream_rxdat_entry_idx (downstream_rxdat_entry_idx ),
-        .downstream_rxdat_txnid     (downstream_rxdat_txnid     ),
-        .downstream_rxdat_data      (downstream_rxdat_data      ),
         .upstream_txdat_data        (upstream_txdat_data        ),
         .upstream_txdat_en          (upstream_txdat_en          ) 
     );
@@ -176,8 +153,7 @@ module icache_top
         .miss_addr_for_prefetch     (miss_addr_for_prefetch     ),
         .prefetch_req_vld           (prefetch_req_vld           ),
         .prefetch_req_rdy           (prefetch_req_rdy           ),
-        .prefetch_req_opcode        (prefetch_req_opcode        ),
-        .prefetch_req_addr          (prefetch_req_addr          )
+        .prefetch_req_pld           (prefetch_req_pld           )
     );
 
 

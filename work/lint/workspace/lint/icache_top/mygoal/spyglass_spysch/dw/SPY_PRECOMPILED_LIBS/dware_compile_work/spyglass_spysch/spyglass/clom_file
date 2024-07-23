@@ -1,0 +1,55 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--autoenable_builtin_checks_policy none              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-64bit          <ON>              CmdLine -                              -
+-batch          <ON>              CmdLine -                              -
+-disable_hdlin_synthesis_off_skip_text <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-disable_hdlin_translate_off_skip_text <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-dw0            <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-enable_pass_exit_codes <ON>              CmdLine -                              -
+-f              /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            DWARE=>/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/SPY_DW_WORK/SPY_PRECOMPILED_LIBS/DWARE CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-noelab         <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-norules        <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-policy         none              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-quiet          <ON>              CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-sort           <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-vhdl           <ON>              CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-wdir           /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dware_compile_work CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+-work           DWARE             CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+<design_files>  /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_arith.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp_arith.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_arith_sim.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_sim.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWmath.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+                /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages_n.vhd CmdFile /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f 1
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vT-2022.06-1 $SPYGLASS_HOME/policies/spyglass
+
+

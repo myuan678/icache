@@ -1,0 +1,88 @@
+SpyGlass run started at 10:48:47 AM on Jul 23 2024 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vT-2022.06-1
+Synopsys TestMAX(TM)
+Last compiled on Jul 23 2022
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+
+Running SpyGlass 64-bit Executable: /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/obj/check.Linux4
+Loading Policy: spyglass (Version: SpyGlass_vT-2022.06-1) from path: /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+##build_id : T-2022.06-1
+##system   : Linux lserver 5.15.0-102-generic #112~20.04.1-Ubuntu SMP Thu Mar 14 14:28:24 UTC 2024 x86_64
+##cwd      : /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace
+##lang     : VHDL
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -dw0 \
+             -sort \
+             -vhdl \
+             -lib DWARE /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/SPY_DW_WORK/SPY_PRECOMPILED_LIBS/DWARE \
+             -quiet \
+             -work 'DWARE' \
+             -noelab \
+             -wdir '/home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/dware_compile_work' \
+             -batch \
+             -norules \
+             -policy='none' \
+             -enable_pass_exit_codes \
+             -disable_hdlin_synthesis_off_skip_text \
+             -disable_hdlin_translate_off_skip_text \
+             --autoenable_builtin_checks_policy 'none' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_arith.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp_arith.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_arith_sim.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_sim.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWmath.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages.vhd' \
+             '/tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages_n.vhd' \
+             -64bit 
+##verbosity level   : 2
+##exact cmdline arg : -f /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f
+##spyglass_run.csh begins :
+;	cd /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace
+;	setenv ATRENTA_LICENSE_FILE 27020@localhost
+;	setenv SPYGLASS_LD_PRELOAD /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/lib/libreplacemalloc.so
+;	setenv SPYGLASS_DW_PATH /tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/dw_support
+;	/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin/spyglass  -f /home/xuemengyuan/try/cache_v1/icache/work/lint/workspace/lint/icache_top/mygoal/spyglass_spysch/dw/SPY_PRECOMPILED_LIBS/spy_precompile_dw.f
+##spyglass_run.csh ends
+##files    : /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_arith.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_Foundation_comp_arith.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_arith_sim.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DW_dp_functions_sim.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWmath.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages.vhd \
+             /tools/software/synopsys/syn/T-2022.03-SP2/bin/../packages/dware/src/DWpackages_n.vhd
+
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis started: 1 sec, 2.75 sec, 209940 KB, 733108 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis started: 1 sec, 2.75 sec, 209940 KB, 733108 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis finished: 1 sec, 3.18 sec, 248228 KB, 766060 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis finished: 0 sec, 0.43 sec, 38288 KB, 32952 KB
+-----------------------------------------------------------------------
+
+0 Error(s), 0 Warning(s), 1 Rule violation(s).
+##SGDEBUG [PEAK_VMSIZE_END_RULE]: 766112 KB for entire run at 'End of sparse attrib dump' stage
+##SGDEBUG [PEAK_SWAP_MEMORY_END_RULE]: 0 KB for entire run
+##SGDEBUG [VMPEAK_MEMORY]: 766112 KB for entire run
+##SGDEBUG [PEAK_RSS_MEMORY]: 251316 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking aborted: 1 sec, 3.21 sec, 246740 KB, 766112 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking aborted: 0 sec, 0.03 sec, -1488 KB, 52 KB
+
+
+=====================================================================================
+							Rule Parameter Table
+=====================================================================================
+
+	PARAMETER-NAME                                     VALUE                DEFAULT VALUE
+-------------------------------------------------------------------------------------
+=====================================================================================
+
+##status : SpyGlass Analysis Complete ('noelab' option was used).

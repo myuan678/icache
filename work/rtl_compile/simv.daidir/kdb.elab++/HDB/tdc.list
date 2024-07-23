@@ -1,0 +1,11 @@
+/home/xuemengyuan/try/cache_v1/icache/cmn_lead_one.sv
+/home/xuemengyuan/try/cache_v1/icache/cmn_onehot2bin.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_data_array_ctrl.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_mshr_entry_buffer.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_mshr_file.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_prefetch_engine.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_req_arbiter_v3.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_tag_array_ctrl.sv
+/home/xuemengyuan/try/cache_v1/icache/icache_top.sv
+/home/xuemengyuan/try/cache_v1/icache/mem/toy_mem_model_bit.sv
+/home/xuemengyuan/try/cache_v1/icache/toy_pack.sv
