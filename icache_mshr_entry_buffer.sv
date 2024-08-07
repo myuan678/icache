@@ -36,57 +36,55 @@ module icache_mshr_entry_buffer
     logic [MSHR_ENTRY_NUM-1     :0]                     entry_bitmap_keep          ;
     logic                                               entry_valid_1d             ;  
     logic                                               downstream_release_en_d1   ;
-    logic                                               done;
+    logic                                               done                       ;
 
-    assign mshr_miss            = ~mshr_hit && entry_valid;
-    assign entry_idle           = ~entry_valid;
+    assign mshr_miss                                    = ~mshr_hit && entry_valid ;
+    assign entry_idle                                   = ~entry_valid             ;
 
     always_ff@(posedge clk or negedge rst_n) begin
         if(!rst_n)begin
-            entry_valid_1d           <= 1'b0        ;
-        end
+            entry_valid_1d           <= 1'b0                                       ;
+        end 
         else begin
-            entry_valid_1d           <= entry_valid ;
+            entry_valid_1d           <= entry_valid                                ;
         end
     end
     always_ff@(posedge clk or negedge rst_n) begin
         if(!rst_n)begin
-            entry_data_keep.pld      <= '{32'b0,5'b0,5'b0};
-            entry_data_keep.dest_way <= 'b0               ;
-            entry_bitmap_keep        <= 'b0               ;
+            entry_data_keep.pld      <= '{default:'0}                               ;
+            entry_data_keep.dest_way <= 'b0                                         ;
+            entry_bitmap_keep        <= 'b0                                         ;
         end
         else if (dataram_release_en | done)begin
-            entry_data_keep.pld      <= '{32'b0,5'b0,5'b0};
-            entry_data_keep.dest_way <= 'b0               ;
-            entry_bitmap_keep        <= 'b0               ;
+            entry_data_keep.pld      <= '{default:'0}                               ;
+            entry_data_keep.dest_way <= 'b0                                         ;
+            entry_bitmap_keep        <= 'b0                                         ;
         end
         else if(entry_valid & ~entry_valid_1d)begin
-            entry_data_keep          <= entry_data        ;
-            entry_bitmap_keep        <= entry_bitmap      ;
+            entry_data_keep          <= entry_data                                  ;
+            entry_bitmap_keep        <= entry_bitmap                                ;
         end
         else begin
-            entry_data_keep          <= entry_data_keep   ;
-            entry_bitmap_keep        <= entry_bitmap_keep ;
+            entry_data_keep          <= entry_data_keep                             ;
+            entry_bitmap_keep        <= entry_bitmap_keep                           ;
         end
     end
     
-   
-
     always_comb begin
         if(entry_valid)begin
-            mshr_hit = |entry_bitmap;
+            mshr_hit = |entry_bitmap                                                ;
         end
         else begin
-            mshr_hit = 1'b0;
+            mshr_hit = 1'b0                                                         ;     
         end
     end
 
     always_ff@(posedge clk or negedge rst_n)begin
         if(!rst_n)begin
-            downstream_release_en_d1 <= 'b0;
+            downstream_release_en_d1 <= 'b0                                         ;
         end
         else begin
-            downstream_release_en_d1 <= downstream_release_en;
+            downstream_release_en_d1 <= downstream_release_en                       ;
         end
     end
 
