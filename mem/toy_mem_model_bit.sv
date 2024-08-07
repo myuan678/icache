@@ -5,7 +5,6 @@ module toy_mem_model_bit #(
     parameter integer unsigned  DATA_WIDTH      = 32
 ) (
     input  logic                     clk         ,
-
     input  logic                     en          ,
     input  logic [ADDR_WIDTH-1:0]    addr        ,
     output logic [DATA_WIDTH-1:0]    rd_data     ,
@@ -21,7 +20,7 @@ module toy_mem_model_bit #(
 
 
     logic_data              memory[logic_addr]    ;
-    logic   [31:0]          tmp_data              ;
+    logic   [35:0]          tmp_data              ;
     string                  arg_parse_str         ;
     string                  code_path             ;
 
@@ -31,13 +30,13 @@ module toy_mem_model_bit #(
         if (memory.exists(address)) begin
             data = memory[address];
         end else begin
-            memory[address] = 'x;
-            data = 'x; 
+            $display("address is %d", address);
+            memory[address] = {DATA_WIDTH{1'b0}};
+            data = {DATA_WIDTH{1'b0}}; 
         end
 
         return data;
     endfunction
-
 
 
 
@@ -79,6 +78,7 @@ module toy_mem_model_bit #(
     // memory read handler =========================================================
     initial begin
         forever begin
+            //#500;
             @(posedge clk)            
             if(en && ~wr_en) rd_data = read_memory(addr);
         end

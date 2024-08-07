@@ -43,3 +43,55 @@ assign a_req_rdy    = select_onehot;
 
 endmodule
 
+
+
+
+
+
+module fix_priority_arb #(
+    parameter integer unsigned WIDTH = 4,
+    parameter type PLD_TYPE = logic ,
+    parameter integer unsigned PLD_WIDTH = 32
+    //parameter type PLD_TYPE  = logic [PLD_WIDTH-1:0]
+    //parameter type PLD_TYPE  = logic
+)(
+    input  [WIDTH-1:0]       v_vld_s,
+    output [WIDTH-1:0]       v_rdy_s,
+    input  PLD_TYPE          v_pld_s [WIDTH-1:0],
+    
+    output                   vld_m,
+    input                    rdy_m,
+    output  PLD_TYPE         pld_m
+);
+
+    logic [WIDTH-1:0] select_onehot;
+    logic [WIDTH-1:0] v_rdy_s_reg;
+
+   
+
+    generate 
+        for(genvar i=0;i<WIDTH;i=i+1)begin:select_req
+            assign select_onehot[i] = (v_vld_s[i] && rdy_m)  ;
+        end
+    endgenerate
+
+    cmn_real_mux_onehot #(
+        .WIDTH        (WIDTH        ),   
+        .PLD_WIDTH    ($bits(PLD_TYPE)    ),
+        .PLD_TYPE     (PLD_TYPE )    
+    ) mux_inst (
+        .select_onehot(select_onehot),
+        .v_pld        (v_pld_s      ),
+        .select_pld   (pld_m        )
+    );
+
+    //assign v_rdy_s = v_rdy_s_reg;
+    //assign vld_m = |select_onehot;
+
+
+
+////
+    assign v_rdy_s = select_onehot;
+    assign vld_m = |v_vld_s;
+
+endmodule

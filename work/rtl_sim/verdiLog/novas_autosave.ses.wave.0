@@ -1,0 +1,115 @@
+Magic 271485
+Revision Verdi_T-2022.06
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1837 414 192 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/xuemengyuan/try/cache_v1/icache/work/rtl_sim/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 641.190714 3568.037740
+cursor 1370.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 42
+; marker line index
+markerPos 51
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/xuemengyuan/try/cache_v1/icache/work/rtl_sim/wave.fsdb"
+addSignal -h 15 /icache_top_tb/dut/upstream_rxreq_vld
+addSignal -h 15 /icache_top_tb/dut/u_icache_tag_array_ctrl/tag_req_vld
+addSignal -h 15 -holdScope tag_miss
+addSignal -h 15 -UNSIGNED -HEX /icache_top_tb/dut/u_icache_mshr_file/u_pre_allocate/vld[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope vld_reg[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope taken_index[2:0]
+addSignal -h 15 -holdScope allocate_entry_en
+addSignal -h 15 /icache_top_tb/dut/u_icache_mshr_file/allocate_index_vld
+addSignal -h 15 -holdScope allocate_req_en
+addSignal -h 15 -UNSIGNED -HEX -holdScope v_entry_idle[7:0]
+addSignal -h 15 -holdScope allocate_index_vld
+addSignal -h 15 -UNSIGNED -HEX -holdScope allocate_index[2:0]
+addSignal -h 15 /icache_top_tb/dut/u_icache_tag_array_ctrl/stall
+addSignal -h 15 -holdScope tag_req_pld
+addSignal -h 15 -holdScope tag_miss
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_hit[1:0]
+addSignal -h 15 -holdScope cre_tag_req_vld
+addSignal -h 15 -holdScope req_pld
+addSignal -h 15 -holdScope req_vld
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_dout[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope index[8:0]
+addSignal -h 15 -holdScope mem_en
+addSignal -h 15 -holdScope tag_array0_wr_en
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_addr[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_dout[35:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_din[35:0]
+addSignal -h 15 -holdScope lru_pick
+addSignal -h 15 -UNSIGNED -HEX -holdScope req_pld.addr.index[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_addr[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_dout[35:18]
+addSignal -h 15 -UNSIGNED -HEX -holdScope tag_array0_dout[17:0]
+addSignal -h 15 -holdScope tag_array0_dout_way0_vld
+addSignal -h 15 -holdScope tag_array0_dout_way1_vld
+addSignal -h 15 -UNSIGNED -HEX -holdScope lru[8:0]
+addSignal -h 15 -holdScope lru_pick
+addSignal -h 15 -UNSIGNED -HEX -holdScope index[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope lru[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope lru[8:0]
+addSignal -h 15 -holdScope tag_miss
+addSignal -h 15 -holdScope tag_way0_hit
+addSignal -h 15 -holdScope tag_way1_hit
+addSignal -h 15 -holdScope tag_miss
+addSignal -h 15 -UNSIGNED -HEX -holdScope lru[8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope lru[8:0]
+addSignal -h 15 /icache_top_tb/dut/u_prefetch_engine/prefetch_req_vld
+addSignal -h 15 -UNSIGNED -HEX -holdScope prefetch_pld.txnid[4:0]
+addSignal -h 15 /icache_top_tb/dut/u_data_array_ctrl/downstream_rxdat_vld
+addSignal -h 15 -UNSIGNED -HEX -holdScope linefill_data[511:0]
+addSignal -h 15 /icache_top_tb/dut/upstream_rxreq_vld
+addSignal -h 15 /icache_top_tb/dut/u_icache_mshr_file/downstream_txreq_vld
+addSignal -h 15 -UNSIGNED -HEX /icache_top_tb/dut/u_data_array_ctrl/upstream_txdat_txnid[4:0]
+addSignal -h 15 /icache_top_tb/dut/u_prefetch_engine/miss_for_prefetch
+addSignal -h 15 /icache_top_tb/dut/u_icache_mshr_file/mshr_tag_req_rdy
+addSignal -h 15 -holdScope mshr_stall
+addSignal -h 15 -UNSIGNED -HEX -holdScope v_entry_idle[7:0]
+addSignal -h 15 /icache_top_tb/dut/u_icache_tag_array_ctrl/cre_tag_req_pld
+addSignal -h 15 /icache_top_tb/dut/u_icache_mshr_file/downstream_txreq_vld
+addSignal -h 15 -UNSIGNED -HEX /icache_top_tb/dut/u_icache_mshr_file/MSHR_ENTRY_ARRAY[0]/u_icache_mshr_entry_buffer/tag_hit[1:0]
+addSignal -h 15 -holdScope tag_miss
+addSignal -h 15 -holdScope entry_valid
+addSignal -h 15 -holdScope entry_idle
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
