@@ -49,7 +49,8 @@ module icache_data_array_ctrl
     assign uptxdat_en = downstream_rxdat_pld.downstream_rxdat_opcode == UPSTREAM_OPCODE         ;
     assign mem_en                       = dataram_rd_vld | linefill_done                        ;
     assign downstream_rxdat_entry_idx   = downstream_rxdat_pld.downstream_rxdat_entry_idx       ;
-    assign dataram_rd_rdy               = (data_array_wr_en == 1'b0)                            ;
+    //assign dataram_rd_rdy               = (data_array_wr_en == 1'b0);
+    assign dataram_rd_rdy               = (data_array_wr_en == 1'b0) && (next_valid_index == {(MSHR_ENTRY_INDEX_WIDTH+1){1'b1}}) ;
     
     always_ff@(posedge clk or negedge rst_n) begin
         if(!rst_n)begin
