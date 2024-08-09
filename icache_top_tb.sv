@@ -42,7 +42,14 @@ module icache_top_tb();
 
     //tb queue
     pc_req_t                                     up_req[$]          ;
-	
+
+    pc_req_t                                     txreq;
+    pc_req_t                                     txreq_q[$];
+    logic [MSHR_ENTRY_INDEX_WIDTH-1:0]           txreq_entry_id;
+    logic [MSHR_ENTRY_INDEX_WIDTH-1:0]           txreq_entry_id_q[$];
+    int                                          rxdat_delay;
+    int up_req_cnt=0, tx_dat_cnt=0,tx_req_cnt=0,rx_dat_cnt=0;
+
     initial begin
     	clk = 0;
         upstream_rxreq_vld                <= 0;
@@ -65,6 +72,7 @@ module icache_top_tb();
             @(posedge clk);
         end while(upstream_rxreq_rdy!==1'b1);
         up_req.push_back(upstream_rxreq_pld);
+        up_req_cnt++;
         upstream_rxreq_vld              <= 0;
         upstream_rxreq_pld.addr.tag     <= 0;
         upstream_rxreq_pld.addr.index   <= 0;
@@ -83,9 +91,6 @@ module icache_top_tb();
         downstream_rxsnp_pld.opcode       <= DOWNSTREAM_OPCODE;
         downstream_rxsnp_pld.txnid        <= id;
         $display("send_downstream_req: tag=%d, index=%d, id=%d", tag, index, id);
-        //while(downstream_rxdat_rdy!==1'b1)begin
-        //    @(posedge clk);
-        //end
         do begin
             @(posedge clk);
         end while(downstream_rxsnp_rdy!==1'b1);
@@ -102,11 +107,12 @@ assign downstream_txreq_rdy = 1'b1;
 
 
 initial begin
-    int testcase = 3;
+    int testcase = 5;
     int delay       ;
     int tag         ;
     int index       ;
     int txnid       ;
+
 
  	rst_n = 1       ;   
 	#100 rst_n = 0  ;
@@ -119,7 +125,14 @@ initial begin
             for(int i=1; i<20; i++)begin
                 delay = $urandom_range(5, 30);
                 #100;
-                send_upstream_req(i, i, i);
+                send_upstream_req(i, 1, i);
+                $display("i=%d, %t", i, $realtime);
+                @(posedge clk);     
+            end
+            for(int i=1; i<20; i++)begin
+                delay = $urandom_range(5, 30);
+                #100;
+                send_upstream_req(i, 1, i);
                 $display("i=%d, %t", i, $realtime);
                 @(posedge clk);     
             end
@@ -127,7 +140,7 @@ initial begin
         2:begin//read(miss)---read(hit)
             fork
                 begin
-                    for(int i=1; i<30; i++)begin
+                    for(int i=1; i<512; i++)begin
                         delay = $urandom_range(5,6);
                         send_upstream_req(i, i, i);
                         $display("send a UP req, tag=%h, index=%h, id=%h, %t", i,i,i, $realtime);
@@ -135,9 +148,9 @@ initial begin
                     end
                 end
                 begin 
-                    for(int i=1; i<30; i++)begin
+                    for(int i=1; i<512; i++)begin
                         delay = $urandom_range(5,6);
-                        send_downstream_req(i, i, i);
+                        send_downstream_req(i, 1, i);
                         $display("send a DOWN req, tag=%h, index=%h, id=%h, %t", i,i,i, $realtime);
                         repeat(delay)@(posedge clk);
                     end
@@ -151,12 +164,12 @@ initial begin
                 repeat(delay)@(posedge clk);
             end   
         end
-        3:begin //random read(miss)---random read(hit)
-            for(int i=1; i<50000; i++)begin
-                tag   = $urandom_range(0,'h2_0000);
-                index = $urandom_range(0,255);
+        3:begin //random read(miss)/(hit)
+            for(int i=1; i<20; i++)begin
+                tag   = $urandom_range(1,'h2);
+                index = $urandom_range(1,2);
                 txnid = i%32;
-                delay = $urandom_range(2,10);
+                delay = $urandom_range(0);
                 send_upstream_req(tag, index, txnid);
                 $display("send a up req, tag=%h, index=%h, id=%h, %t", i,i,i, $realtime);
                 repeat(delay)@(posedge clk);
@@ -192,9 +205,25 @@ initial begin
                 repeat(delay)@(posedge clk);
             end
         end
+        5:begin
+            for(int i=1; i<512; i++)begin
+                delay = $urandom_range(5,6);
+                send_upstream_req(i, i, i);
+                $display("send a UP req, tag=%h, index=%h, id=%h, %t", i,i,i, $realtime);
+                repeat(delay)@(posedge clk);
+            end
+            for(int i=1; i<512; i++)begin
+                delay = $urandom_range(5,6);
+                send_upstream_req(i, 1, i);
+                $display("send a DOWN req, tag=%h, index=%h, id=%h, %t", i,i,i, $realtime);
+                repeat(delay)@(posedge clk);
+            end
+        end
     endcase
     #25000;
     if(up_req.size()!=0)$error("there %0d up req not processed!",up_req.size());
+    $display("CPU send %0d up req, receive %0d tx dat",up_req_cnt,tx_dat_cnt);
+    $display("CPU send %0d tx req, receive %0d rx dat",tx_req_cnt,rx_dat_cnt);
     #20000;
     $finish;
 end
@@ -202,18 +231,55 @@ end
 
 //-------------------------gen response rx data----------------------------//
 initial begin
-    int                                          rxdat_delay;
-    pc_req_t                                     txreq;
-    pc_req_t                                     txreq_q[$];
-    logic [MSHR_ENTRY_INDEX_WIDTH-1:0]           txreq_entry_id;
-    logic [MSHR_ENTRY_INDEX_WIDTH-1:0]           txreq_entry_id_q[$];
     forever begin
         @(posedge downstream_txreq_vld);
-        fork
-            begin
-                txreq_q.push_back(downstream_txreq_pld);
-                txreq_entry_id_q.push_back(downstream_txreq_entry_id);
-                rxdat_delay     = $urandom_range(20, 21);
+        tx_req_cnt++;
+        txreq_q.push_back(downstream_txreq_pld);
+        txreq_entry_id_q.push_back(downstream_txreq_entry_id);
+    end
+end
+
+
+////////////out of order rx data gen/////////////////
+//initial begin
+//    int random_index;
+//    forever begin
+//        @(posedge clk);
+//        if(txreq_q.size()>0)begin
+//                rxdat_delay     = $urandom_range(20, 21);
+//                repeat(rxdat_delay)@(posedge clk);
+//                random_index = $urandom_range(0,txreq_q.size()-1);
+//                txreq = txreq_q[random_index];
+//                txreq_entry_id = txreq_entry_id_q[random_index];
+//                txreq_q.delete(random_index);
+//                txreq_entry_id_q.delete(random_index);
+//
+//                //txreq = txreq_q.pop_front();
+//                //txreq_entry_id = txreq_entry_id_q.pop_front();
+//                downstream_rxdat_vld                            <= 1;
+//                downstream_rxdat_pld.downstream_rxdat_opcode    <= txreq.opcode;
+//                downstream_rxdat_pld.downstream_rxdat_txnid     <= txreq.txnid;
+//                downstream_rxdat_pld.downstream_rxdat_data      <= txreq.addr;
+//                downstream_rxdat_pld.downstream_rxdat_entry_idx <= txreq_entry_id;
+//                $display("downstream_rxdat = %h   %t, nid=%0h,remain pkt=%0d",txreq.addr,$realtime,txreq.txnid,txreq_q.size() );
+//                do begin
+//                    @(posedge clk);
+//                end while(downstream_rxdat_rdy!==1'b1);
+//                rx_dat_cnt++;
+//                downstream_rxdat_vld                            <=  0;
+//                downstream_rxdat_pld.downstream_rxdat_opcode    <= 'b0;
+//                downstream_rxdat_pld.downstream_rxdat_txnid     <= 'b0;
+//                downstream_rxdat_pld.downstream_rxdat_data      <= 'b0;
+//                downstream_rxdat_pld.downstream_rxdat_entry_idx <= 'b0;           
+//        end
+//    end
+//end
+////////////inorder rx data gen//////////////////
+initial begin
+    forever begin
+        @(posedge clk);
+        if(txreq_q.size()>0)begin
+                rxdat_delay     = $urandom_range(10, 11);
                 repeat(rxdat_delay)@(posedge clk);
                 txreq = txreq_q.pop_front();
                 txreq_entry_id = txreq_entry_id_q.pop_front();
@@ -222,28 +288,27 @@ initial begin
                 downstream_rxdat_pld.downstream_rxdat_txnid     <= txreq.txnid;
                 downstream_rxdat_pld.downstream_rxdat_data      <= txreq.addr;
                 downstream_rxdat_pld.downstream_rxdat_entry_idx <= txreq_entry_id;
-                $display("downstream_rxdat = %h   %t, remain pkt=%0d",txreq.addr,$realtime,txreq_q.size() );
-        
+                $display("downstream_rxdat = %h   %t, nid=%0h,remain pkt=%0d",txreq.addr,$realtime,txreq.txnid,txreq_q.size() );
                 do begin
                     @(posedge clk);
                 end while(downstream_rxdat_rdy!==1'b1);
+                rx_dat_cnt++;
                 downstream_rxdat_vld                            <=  0;
                 downstream_rxdat_pld.downstream_rxdat_opcode    <= 'b0;
                 downstream_rxdat_pld.downstream_rxdat_txnid     <= 'b0;
                 downstream_rxdat_pld.downstream_rxdat_data      <= 'b0;
-                downstream_rxdat_pld.downstream_rxdat_entry_idx <= 'b0;
-                    
-            end
-        join_none
-        #0;
+                downstream_rxdat_pld.downstream_rxdat_entry_idx <= 'b0;           
+        end
     end
 end
 
 //------------------------------checker-----------------------------//
 initial begin
     int  txnid_flag=0;
+    //int  txdat_duration =0;
     forever begin
         @(posedge upstream_txdat_vld);
+        tx_dat_cnt++;
         foreach(up_req[i])begin
             if(up_req[i].txnid == upstream_txdat_txnid)begin
                 txnid_flag = 1;
@@ -261,10 +326,40 @@ initial begin
         else begin
             txnid_flag = 0;
         end
-        
     end
-
 end
+//initial begin
+//    int txnid_flag = 0;
+//    int txdat_duration = 0;
+//    forever begin
+//        @(posedge clk);  
+//        if (upstream_txdat_vld) begin
+//            txdat_duration++;
+//        end else if (txdat_duration > 0) begin
+//            tx_dat_cnt += txdat_duration;
+//            
+//            txnid_flag = 0;
+//            foreach(up_req[i]) begin
+//                if(up_req[i].txnid == upstream_txdat_txnid) begin
+//                    txnid_flag = 1;
+//                    if(up_req[i].addr !== upstream_txdat_data) begin
+//                        $error("compare error when txnid=%0d", upstream_txdat_txnid);
+//                    end else begin
+//                        $display("txnid %d compare pass", upstream_txdat_txnid);
+//                    end
+//                    up_req.delete(i);
+//                    break; 
+//                end
+//            end
+//            
+//            if(txnid_flag == 0) begin
+//                $error("receive txnid=%0d error", upstream_txdat_txnid);
+//            end
+//            
+//            txdat_duration = 0;
+//        end
+//    end
+//end
 
 icache_top  dut (
     .clk                      (clk                    ),
@@ -300,3 +395,14 @@ initial begin
 	end
 end
 endmodule
+
+
+        //@(posedge clk);
+        //if(upstream_txdat_vld)begin
+        //    txdat_duration++;
+        //end else begin
+        //    if(txdat_duration>0)begin
+        //        tx_dat_cnt += txdat_duration;
+        //        txdat_duration = 0;
+        //    end
+        //end
