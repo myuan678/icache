@@ -18,7 +18,7 @@ module icache_tag_array_ctrl
     always_comb begin
         cre_tag_req_vld = 1'b0;
         cre_tag_req_pld = '{default:'0};
-        if(tag_req_vld &&tagram_req_rdy )begin
+        if(tag_req_vld && tagram_req_rdy )begin
             cre_tag_req_vld = tag_req_vld;
             cre_tag_req_pld = tag_req_pld;
         end
@@ -107,50 +107,60 @@ module icache_tag_array_ctrl
         end
     end
 
-    always_comb begin
-        if (tag_array0_dout_way0_vld== 1'b0)begin
-            lru[index] = 1'b0          ;
-        end
-        else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b0)begin
-            lru[index] = 1'b1          ;
-        end
-        else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b1)begin
-              if ((tag_way0_hit == 1'b1)  && (tag_way1_hit == 1'b0))begin
-                  lru[index] = 1'b1          ;
-              end
-              else if ((tag_way0_hit == 1'b0)  && (tag_way1_hit == 1'b1)) begin
-                  lru[index] = 1'b0          ;
-              end
-              else if (tag_miss) begin
-                  //lru_pick = ~lru[index]   ;
-                  lru[index] = 1'b0;
-              end
-        end
-    end
-    //always_ff@(posedge clk or negedge rst_n) begin
-    //    if(!rst_n)begin
-    //        lru <= 'b0                      ;
-    //    end
-    //    else if (tag_array0_dout_way0_vld== 1'b0)begin
-    //        lru[index] <= 1'b0              ;
+    //always_comb begin
+    //    if (tag_array0_dout_way0_vld== 1'b0)begin
+    //        lru[index] = 1'b0          ;
     //    end
     //    else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b0)begin
-    //        lru[index] <= 1'b1              ;
+    //        lru[index] = 1'b1          ;
     //    end
     //    else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b1)begin
-    //        if ((tag_way0_hit == 1'b1)  && (tag_way1_hit == 1'b0))begin
-    //            lru[index] <= 1'b1          ;
-    //        end
-    //        else if ((tag_way0_hit == 1'b0)  && (tag_way1_hit == 1'b1)) begin
-    //            lru[index] <= 1'b0          ;
-    //        end
-    //        else if (tag_miss) begin
-    //            lru[index] <= ~lru[index]   ;
-    //            //lru[index] = 1'b0;
-    //        end
+    //          if ((tag_way0_hit == 1'b1)  && (tag_way1_hit == 1'b0))begin
+    //              lru[index] = 1'b1          ;
+    //          end
+    //          else if ((tag_way0_hit == 1'b0)  && (tag_way1_hit == 1'b1)) begin
+    //              lru[index] = 1'b0          ;
+    //          end
+    //          else if (tag_miss) begin
+    //              //lru_pick = ~lru[index]   ;
+    //              lru[index] = 1'b0;
+    //          end
     //    end
     //end
-    assign lru_pick = lru[index];
+    always_ff@(posedge clk or negedge rst_n) begin
+        if(!rst_n)begin
+            lru <= 'b0                      ;
+        end
+        else if (tag_array0_dout_way0_vld== 1'b0)begin
+            lru[index] <= 1'b0              ;
+        end
+        else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b0)begin
+            lru[index] <= 1'b1              ;
+        end
+        else if (tag_array0_dout_way0_vld== 1'b1 && tag_array0_dout_way1_vld == 1'b1)begin
+            if ((tag_way0_hit == 1'b1)  && (tag_way1_hit == 1'b0))begin
+                lru[index] <= 1'b1          ;
+            end
+            else if ((tag_way0_hit == 1'b0)  && (tag_way1_hit == 1'b1)) begin
+                lru[index] <= 1'b0          ;
+            end
+            else if (tag_miss) begin
+                lru[index] <= ~lru[index]   ;
+            end
+        end
+    end
+
+    always_comb begin
+        if(tag_way0_hit)begin
+            lru_pick = 1'b0;
+        end
+        else if(tag_way1_hit)begin
+            lru_pick = 1'b1;
+        end
+        else begin
+            lru_pick = lru[index];
+        end
+    end
 
 
     toy_mem_model_bit #(

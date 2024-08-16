@@ -79,6 +79,7 @@ module icache_top
     logic [MSHR_ENTRY_INDEX_WIDTH-1 :0]                 mshr_linefill_done_idx      ;
     logic                                               linefill_done               ;
     logic[MSHR_ENTRY_NUM-1          :0]                 v_linefill_done             ;
+    logic [MSHR_ENTRY_INDEX_WIDTH :0]                   linefill_ack_entry_idx      ;
 
     icache_req_arbiter u_icache_req_arbiter (
         .clk                        (clk                        ),
@@ -138,7 +139,8 @@ module icache_top
         .downstream_txrsp_rdy       (downstream_txrsp_rdy       ),
         .downstream_txrsp_opcode    (downstream_txrsp_opcode    ),
         .v_mshr_entry_array         (v_mshr_entry_array         ),
-        .v_linefill_done            (v_linefill_done            )
+        .linefill_ack_entry_idx     (linefill_ack_entry_idx     ),
+        .linefill_done              (linefill_done            )
     );
 
 
@@ -149,11 +151,11 @@ module icache_top
         .dataram_rd_vld             (dataram_rd_vld             ),
         .dataram_rd_rdy             (dataram_rd_rdy             ),
         .dataram_rd_way             (dataram_rd_way             ),
-
         .dataram_rd_index           (dataram_rd_index           ),
         .dataram_rd_txnid           (dataram_rd_txnid           ),
         .mshr_entry_array_msg       (v_mshr_entry_array         ),
-        .v_linefill_done            (v_linefill_done            ),
+        .linefill_ack_entry_idx     (linefill_ack_entry_idx     ),
+        .linefill_done              (linefill_done              ),
         .downstream_rxdat_vld       (downstream_rxdat_vld       ),
         .downstream_rxdat_rdy       (downstream_rxdat_rdy       ),
         .downstream_rxdat_pld       (downstream_rxdat_pld       ),

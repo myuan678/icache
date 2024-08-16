@@ -23,17 +23,17 @@ package toy_pack;
   
   typedef enum logic [3:0] {
     IDLE                        ,
-    ALLOCATE                    ,
-    WRITE_ENTRY                 ,
-    COMP                        ,
+    ALLOC                       ,
+    WAIT_READ_REQ               ,
+    WAIT_DATARAM_RDY            ,
     READ_DATA                   ,
     DOWNSTREAM_REQ              ,
+    WAIT_DOWNSTREAM_REQ         ,
     DOWNSTREAM_REQ_WAIT_FILL    ,
     WAIT_FILL_DONE              ,
     DATARAM_RELEASE             ,
-    DOWNSTREAM_RELEASE  ,
-    ENTRY_RELEASE_DONE,
-    DONE,
+    DOWNSTREAM_RELEASE          ,
+    ENTRY_RELEASE_DONE          ,
     END_STATE
   } state_t;
   
@@ -66,8 +66,9 @@ package toy_pack;
   typedef struct packed{
       logic                                            valid                      ;
       pc_req_t                                         req_pld                    ;
-      logic                                            dest_way                    ;
-      logic [MSHR_ENTRY_NUM-1             :0]          hit_bitmap                 ;
+      logic                                            dest_way                   ;
+      //logic [MSHR_ENTRY_NUM-1             :0]          hit_bitmap                 ;
+      logic [MSHR_ENTRY_NUM-1             :0]          index_way_bitmap           ;
   } mshr_entry_t;
   
   

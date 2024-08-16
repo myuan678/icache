@@ -142,8 +142,8 @@ module pre_allocate
 );
 
 
-    logic [ENTRY_NUM-1  :0] selected_chn;
-    logic [ENTRY_NUM-1  :0] vld_reg ;
+    logic [ENTRY_NUM-1  :0] selected_chn                    ;
+    logic [ENTRY_NUM-1  :0] vld_reg                         ;
 
     always_ff@(posedge clk or negedge rst_n)begin
         if(!rst_n)begin
