@@ -1,0 +1,15 @@
+Command Line: /tools/software/synopsys/verdi/T-2022.06/platform/LINUXAMD64/bin/Novas -sv -ssf wave.fsdb -dbdir simv.daidir
+uname(Linux lserver 5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024 x86_64)
+type= DS_SIGNAL element= 1 field= 2
+VERILOG icache_top_tb
+VERILOG dut
+VERILOG u_icache_tag_array_ctrl
+VERILOG req_vld_A
+-----
+second field= signal
+type= DS_STRING
+req_vld_A
+[MessageBox] The KDB has been updated by other processes. Reload the KDB to update it; otherwise, you may get unexpected results.
+BeginLine(0) < 1
+BeginLine(0) < 1
+BeginLine(0) < 1

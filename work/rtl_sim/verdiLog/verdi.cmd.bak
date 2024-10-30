@@ -1,0 +1,85 @@
+verdiSetActWin -dock widgetDock_<Message>
+simSetSimulator "-vcssv" -exec "simv" -args "+v2k -a com.log +WAVE"
+debImport "-sv" "-dbdir" "simv.daidir"
+debLoadSimResult /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/wave.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "199" "119" "1440" "775"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "icache_top_tb" -win $_nTrace1
+srcHBSelect "icache_top_tb.dut.u_icache_req_arbiter" -win $_nTrace1
+srcSetScope "icache_top_tb.dut.u_icache_req_arbiter" -delim "." -win $_nTrace1
+srcHBSelect "icache_top_tb.dut.u_icache_req_arbiter" -win $_nTrace1
+srcHBSelect "icache_top_tb.dut.u_icache_req_arbiter" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "upstream_rxreq_vld" -line 7 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 209.320217 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave2
+wvZoomAll -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "upstream_rxreq_rdy" -line 8 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "upstream_rxreq_rdy" -line 8 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "alloc_vld" -line 19 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "alloc_index" -line 20 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "tag_req_vld" -line 23 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "tag_req_rdy" -line 24 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "icache_top_tb.dut.u_icache_tag_array_ctrl" -win $_nTrace1
+srcSetScope "icache_top_tb.dut.u_icache_tag_array_ctrl" -delim "." -win $_nTrace1
+srcHBSelect "icache_top_tb.dut.u_icache_tag_array_ctrl" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "tag_req_vld" -line 7 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "A_miss" -line 15 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "B_miss" -line 16 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "B_hit" -line 14 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "A_hit" -line 13 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "A_miss" -line 15 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cre_tag_req_vld" -line 105 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cre_tag_req_vld" -line 105 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "align" -line 117 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1

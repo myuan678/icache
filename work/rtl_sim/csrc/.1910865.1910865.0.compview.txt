@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1723111381.251278582, "rt":1.89, "ut":0.11, "st":0.05}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1723111380.699463904}
+{"VCS_COMP_START_TIME": 1723111380.699463904}
+{"VCS_COMP_END_TIME": 1723111383.201445948}
+{"VCS_USER_OPTIONS": "-sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /home/xuemengyuan/try/cache_v1/icache/icache_filelist.f -R +WAVE"}
+{"vcs1": {"peak_mem": 1911353}}

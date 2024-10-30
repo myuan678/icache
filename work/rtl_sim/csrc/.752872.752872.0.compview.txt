@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1730189124.496490931, "rt":2.09, "ut":0.30, "st":0.10}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1730189123.987096627}
+{"VCS_COMP_START_TIME": 1730189123.987096627}
+{"VCS_COMP_END_TIME": 1730189126.675098708}
+{"VCS_USER_OPTIONS": "-sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /data/usr/xuemy/try/cache_v2/icache_filelist.f -R +WAVE"}
+{"vcs1": {"peak_mem": 753360}}

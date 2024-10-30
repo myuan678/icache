@@ -1,0 +1,1718 @@
+mkdir -p /data/usr/xuemy/try/cache_v2/icache/work/rtl_compile
+cd /data/usr/xuemy/try/cache_v2/icache/work/rtl_compile ;vcs -kdb -full64 -debug_access -sverilog -f /data/usr/xuemy/try/cache_v2/icache_lint.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Tue Oct 29 10:50:08 2024
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/data/usr/xuemy/try/cache_v2/toy_pack.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_top.sv'
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 61
+  Second declaration for identifier 'clk' ignored
+  Identifier 'clk' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 4]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 62
+  Second declaration for identifier 'rst_n' ignored
+  Identifier 'rst_n' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 5]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 86
+  Second declaration for identifier 'prefetch_enable' ignored
+  Identifier 'prefetch_enable' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 6]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 87
+  Second declaration for identifier 'A_hit' ignored
+  Identifier 'A_hit' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 67]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 88
+  Second declaration for identifier 'B_hit' ignored
+  Identifier 'B_hit' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 68]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 89
+  Second declaration for identifier 'A_miss' ignored
+  Identifier 'A_miss' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 69]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 90
+  Second declaration for identifier 'B_miss' ignored
+  Identifier 'B_miss' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 70]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 91
+  Second declaration for identifier 'mshr_update_en' ignored
+  Identifier 'mshr_update_en' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 73]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 93
+  Second declaration for identifier 'pre_tag_req_vld' ignored
+  Identifier 'pre_tag_req_vld' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 71]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 94
+  Second declaration for identifier 'pre_tag_req_pld' ignored
+  Identifier 'pre_tag_req_pld' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 72]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 99
+  Second declaration for identifier 'pref_to_mshr_req_rdy' ignored
+  Identifier 'pref_to_mshr_req_rdy' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 47]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 111
+  Second declaration for identifier 'vv_mshr_entry_array' ignored
+  Identifier 'vv_mshr_entry_array' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 66]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 115
+  Second declaration for identifier 'entry_release_done_index' ignored
+  Identifier 'entry_release_done_index' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 83]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 116
+  Second declaration for identifier 'downstream_txreq_vld' ignored
+  Identifier 'downstream_txreq_vld' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 28]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 117
+  Second declaration for identifier 'downstream_txreq_rdy' ignored
+  Identifier 'downstream_txreq_rdy' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 29]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 118
+  Second declaration for identifier 'downstream_txreq_pld' ignored
+  Identifier 'downstream_txreq_pld' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 30]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 119
+  Second declaration for identifier 'downstream_txreq_entry_id' ignored
+  Identifier 'downstream_txreq_entry_id' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 32]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 120
+  Second declaration for identifier 'downstream_txrsp_vld' ignored
+  Identifier 'downstream_txrsp_vld' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 35]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 121
+  Second declaration for identifier 'downstream_txrsp_rdy' ignored
+  Identifier 'downstream_txrsp_rdy' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 36]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 122
+  Second declaration for identifier 'downstream_txrsp_opcode' ignored
+  Identifier 'downstream_txrsp_opcode' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 37]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 123
+  Second declaration for identifier 'v_A_hazard_bitmap' ignored
+  Identifier 'v_A_hazard_bitmap' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 81]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 124
+  Second declaration for identifier 'v_B_hazard_bitmap' ignored
+  Identifier 'v_B_hazard_bitmap' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 82]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 125
+  Second declaration for identifier 'bypass_rd_dataramA_vld' ignored
+  Identifier 'bypass_rd_dataramA_vld' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 75]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 126
+  Second declaration for identifier 'bypass_rd_dataramB_vld' ignored
+  Identifier 'bypass_rd_dataramB_vld' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 77]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 127
+  Second declaration for identifier 'bypass_rd_dataramA_pld' ignored
+  Identifier 'bypass_rd_dataramA_pld' previously declared as 
+  <UserDefinedType>. [/data/usr/xuemy/try/cache_v2/icache_top.sv, 76]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 128
+  Second declaration for identifier 'bypass_rd_dataramB_pld' ignored
+  Identifier 'bypass_rd_dataramB_pld' previously declared as 
+  <UserDefinedType>. [/data/usr/xuemy/try/cache_v2/icache_top.sv, 78]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 129
+  Second declaration for identifier 'A_index_way_checkpass' ignored
+  Identifier 'A_index_way_checkpass' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 79]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 130
+  Second declaration for identifier 'B_index_way_checkpass' ignored
+  Identifier 'B_index_way_checkpass' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 80]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 131
+  Second declaration for identifier 'entry_data' ignored
+  Identifier 'entry_data' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 74]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 134
+  Second declaration for identifier 'dataram_rd_rdy' ignored
+  Identifier 'dataram_rd_rdy' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 102]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 135
+  Second declaration for identifier 'dataramA_rd_vld' ignored
+  Identifier 'dataramA_rd_vld' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 103]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 136
+  Second declaration for identifier 'dataramA_rd_way' ignored
+  Identifier 'dataramA_rd_way' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 104]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 137
+  Second declaration for identifier 'dataramA_rd_index' ignored
+  Identifier 'dataramA_rd_index' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 105]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 138
+  Second declaration for identifier 'dataramA_rd_txnid' ignored
+  Identifier 'dataramA_rd_txnid' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 106]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 139
+  Second declaration for identifier 'dataramB_rd_vld' ignored
+  Identifier 'dataramB_rd_vld' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 107]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 140
+  Second declaration for identifier 'dataramB_rd_way' ignored
+  Identifier 'dataramB_rd_way' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 108]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 141
+  Second declaration for identifier 'dataramB_rd_index' ignored
+  Identifier 'dataramB_rd_index' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 109]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 142
+  Second declaration for identifier 'dataramB_rd_txnid' ignored
+  Identifier 'dataramB_rd_txnid' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 110]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 143
+  Second declaration for identifier 'downstream_rxdat_vld' ignored
+  Identifier 'downstream_rxdat_vld' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 40]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 144
+  Second declaration for identifier 'downstream_rxdat_rdy' ignored
+  Identifier 'downstream_rxdat_rdy' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 41]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 145
+  Second declaration for identifier 'downstream_rxdat_pld' ignored
+  Identifier 'downstream_rxdat_pld' previously declared as input port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 42]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 146
+  Second declaration for identifier 'linefill_ack_entry_idx' ignored
+  Identifier 'linefill_ack_entry_idx' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 114]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 147
+  Second declaration for identifier 'linefillA_done' ignored
+  Identifier 'linefillA_done' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 112]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 148
+  Second declaration for identifier 'linefillB_done' ignored
+  Identifier 'linefillB_done' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 113]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 149
+  Second declaration for identifier 'upstream_txdat_data' ignored
+  Identifier 'upstream_txdat_data' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 8]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 150
+  Second declaration for identifier 'upstream_txdat_vld' ignored
+  Identifier 'upstream_txdat_vld' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 9]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 151
+  Second declaration for identifier 'upstream_txdat_txnid' ignored
+  Identifier 'upstream_txdat_txnid' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 10]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 155
+  Second declaration for identifier 'dataram_rd_rdy' ignored
+  Identifier 'dataram_rd_rdy' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 102]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 160
+  Second declaration for identifier 'vv_mshr_entry_array' ignored
+  Identifier 'vv_mshr_entry_array' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 66]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 165
+  Second declaration for identifier 'linefill_ack_entry_idx' ignored
+  Identifier 'linefill_ack_entry_idx' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 114]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 168
+  Second declaration for identifier 'mshr_update_en' ignored
+  Identifier 'mshr_update_en' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 73]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 169
+  Second declaration for identifier 'mshr_update_pld' ignored
+  Identifier 'mshr_update_pld' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 92]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 173
+  Second declaration for identifier 'entry_data' ignored
+  Identifier 'entry_data' previously declared as <UserDefinedType>. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 74]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 177
+  Second declaration for identifier 'entry_release_done_index' ignored
+  Identifier 'entry_release_done_index' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 83]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 180
+  Second declaration for identifier 'index_way_checkpass' ignored
+  Identifier 'index_way_checkpass' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 133]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 181
+  Second declaration for identifier 'v_A_hazard_bitmap' ignored
+  Identifier 'v_A_hazard_bitmap' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 81]
+
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 182
+  Second declaration for identifier 'v_B_hazard_bitmap' ignored
+  Identifier 'v_B_hazard_bitmap' previously declared as logic. 
+  [/data/usr/xuemy/try/cache_v2/icache_top.sv, 82]
+
+Parsing design file '/data/usr/xuemy/try/cache_v2/cmn_lead_one.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/cmn_onehot2bin.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/cmn_onehot2bin2.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_req_arbiter.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/fix_priority_arb.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_tag_pipe_2tagram.sv'
+
+Warning-[IPDW] Identifier previously declared
+/data/usr/xuemy/try/cache_v2/icache_tag_pipe_2tagram.sv, 62
+  Second declaration for identifier 'mshr_update_en' ignored
+  Identifier 'mshr_update_en' previously declared as output port. 
+  [/data/usr/xuemy/try/cache_v2/icache_tag_pipe_2tagram.sv, 21]
+
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_prefetch_engine.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_mshr_entry.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/icache_data_array_ctrl.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/mem/toy_mem_model_bit.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/pre_allocate.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/sync_fifo.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/vrp_arb.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/arb_vrp.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/arb_fp.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/v_en_decode.sv'
+Parsing design file '/data/usr/xuemy/try/cache_v2/cmn_real_mux_onehot.sv'
+Top Level Modules:
+       icache_top
+       fix_priority_arb
+       icache_prefetch_engine
+       sync_fifo
+No TimeScale specified
+
+Lint-[TFIPC-L] Too few instance port connections
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 205
+icache_top, "icache_tag_array_ctrl u_icache_tag_array_ctrl( .clk (clk),  .rst_n (rst_n),  .dataram_rd_rdy (dataram_rd_rdy),  .tag_req_vld (tag_req_vld),  .tag_req_rdy (tag_req_rdy),  .tag_req_pld (tag_req_pld),  .tag_req_index (tag_req_idnex),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .entry_data (entry_data),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramB_vld),  .bypass_rd_dataramA_pld (bypass_rd_dataramA_pld),  .bypass_rd_dataramB_pld (bypass_rd_dataramB_pld),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .entry_releas ... "
+  The above instance has fewer port connections than the module definition,
+  There are 26 port(s) in module "icache_tag_array_ctrl_0000" definition, but 
+  only 24 port connect(s) in the instance.
+  output port 'pre_tag_req_vld' is not connected,
+  output port 'pre_tag_req_pld' is not connected.
+
+
+Warning-[DPIMI] Duplicate port in module instantiation
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+"icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .mshr_stall (mshr_stall),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dat ... "
+  Port 'mshr_stall' is connected more than once for instance 
+  'u_icache_mshr_file' of 'icache_mshr_file'.
+  Extra connection will be ignored.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+icache_top, "icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dataramB_rd_index),  .dataramB ... "
+  The above instance has fewer port connections than the module definition,
+  There are 50 port(s) in module "icache_mshr_file_0000" definition, but only 
+  49 port connect(s) in the instance.
+  input port 'index_way_checkpass' is not connected.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 205
+"icache_tag_array_ctrl u_icache_tag_array_ctrl( .clk (clk),  .rst_n (rst_n),  .dataram_rd_rdy (dataram_rd_rdy),  .tag_req_vld (tag_req_vld),  .tag_req_rdy (tag_req_rdy),  .tag_req_pld (tag_req_pld),  .tag_req_index (tag_req_idnex),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .entry_data (entry_data),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramB_vld),  .bypass_rd_dataramA_pld (bypass_rd_dataramA_pld),  .bypass_rd_dataramB_pld (bypass_rd_dataramB_pld),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .entry_releas ... "
+  The following 42-bit expression is connected to 14-bit port 
+  "bypass_rd_dataramA_pld" of module "icache_tag_array_ctrl", instance 
+  "u_icache_tag_array_ctrl".
+  Expression: bypass_rd_dataramA_pld
+  The expression is from module icache_top
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 205
+"icache_tag_array_ctrl u_icache_tag_array_ctrl( .clk (clk),  .rst_n (rst_n),  .dataram_rd_rdy (dataram_rd_rdy),  .tag_req_vld (tag_req_vld),  .tag_req_rdy (tag_req_rdy),  .tag_req_pld (tag_req_pld),  .tag_req_index (tag_req_idnex),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .entry_data (entry_data),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramB_vld),  .bypass_rd_dataramA_pld (bypass_rd_dataramA_pld),  .bypass_rd_dataramB_pld (bypass_rd_dataramB_pld),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .entry_releas ... "
+  The following 42-bit expression is connected to 14-bit port 
+  "bypass_rd_dataramB_pld" of module "icache_tag_array_ctrl", instance 
+  "u_icache_tag_array_ctrl".
+  Expression: bypass_rd_dataramB_pld
+  The expression is from module icache_top
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+"icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dataramB_rd_index),  .dataramB ... "
+  The following 2-bit expression is connected to 1-bit port "A_hit" of module 
+  "icache_mshr_file", instance "u_icache_mshr_file".
+  Expression: A_hit
+  The expression is from module icache_top
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+"icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dataramB_rd_index),  .dataramB ... "
+  The following 2-bit expression is connected to 1-bit port "B_hit" of module 
+  "icache_mshr_file", instance "u_icache_mshr_file".
+  Expression: B_hit
+  The expression is from module icache_top
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+"icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dataramB_rd_index),  .dataramB ... "
+  The following 42-bit expression is connected to 14-bit port 
+  "bypass_rd_dataramA_pld" of module "icache_mshr_file", instance 
+  "u_icache_mshr_file".
+  Expression: bypass_rd_dataramA_pld
+  The expression is from module icache_top
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_top.sv, 235
+"icache_mshr_file u_icache_mshr_file( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .mshr_update_en (mshr_update_en),  .mshr_update_pld (mshr_update_pld),  .pre_tag_req_vld (pre_tag_req_vld),  .pre_tag_req_pld (pre_tag_req_pld),  .alloc_vld (alloc_vld),  .alloc_rdy (alloc_rdy),  .alloc_index (alloc_index),  .pref_to_mshr_req_rdy (pref_to_mshr_req_rdy),  .dataram_rd_rdy (dataram_rd_rdy),  .dataramA_rd_vld (dataramA_rd_vld),  .dataramA_rd_way (dataramA_rd_way),  .dataramA_rd_index (dataramA_rd_index),  .dataramA_rd_txnid (dataramA_rd_txnid),  .dataramB_rd_vld (dataramB_rd_vld),  .dataramB_rd_way (dataramB_rd_way),  .dataramB_rd_index (dataramB_rd_index),  .dataramB ... "
+  The following 42-bit expression is connected to 14-bit port 
+  "bypass_rd_dataramB_pld" of module "icache_mshr_file", instance 
+  "u_icache_mshr_file".
+  Expression: bypass_rd_dataramB_pld
+  The expression is from module icache_top
+
+
+Warning-[IWNF] Implicit wire has no fanin
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 235
+  Implicit wire 'v_dataramA_rd_vld' does not have any driver, please make sure
+  this is intended.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 152
+"v_en_decode #(toy_pack::MSHR_ENTRY_NUM) u_linefillA_done_dec( .enable (linefillA_done),  .enable_index (linefill_ack_entry_idx),  .v_out_en (v_linefillA_done));"
+  The following 5-bit expression is connected to 4-bit port "enable_index" of 
+  module "v_en_decode", instance "u_linefillA_done_dec".
+  Expression: linefill_ack_entry_idx
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 152
+"v_en_decode #(toy_pack::MSHR_ENTRY_NUM) u_linefillA_done_dec( .enable (linefillA_done),  .enable_index (linefill_ack_entry_idx),  .v_out_en (v_linefillA_done));"
+  The following 1-bit expression is connected to 16-bit port "v_out_en" of 
+  module "v_en_decode", instance "u_linefillA_done_dec".
+  Expression: v_linefillA_done
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 158
+"v_en_decode #(toy_pack::MSHR_ENTRY_NUM) u_linefillB_done_dec( .enable (linefillB_done),  .enable_index (linefill_ack_entry_idx),  .v_out_en (v_linefillB_done));"
+  The following 5-bit expression is connected to 4-bit port "enable_index" of 
+  module "v_en_decode", instance "u_linefillB_done_dec".
+  Expression: linefill_ack_entry_idx
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 158
+"v_en_decode #(toy_pack::MSHR_ENTRY_NUM) u_linefillB_done_dec( .enable (linefillB_done),  .enable_index (linefill_ack_entry_idx),  .v_out_en (v_linefillB_done));"
+  The following 1-bit expression is connected to 16-bit port "v_out_en" of 
+  module "v_en_decode", instance "u_linefillB_done_dec".
+  Expression: v_linefillB_done
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 167
+"cmn_onehot2bin2 #(toy_pack::MSHR_ENTRY_NUM, ) u_release_done_index( .onehot_in (v_release_en),  .bin_out (entry_release_done_index));"
+  The following 4-bit expression is connected to 5-bit port "bin_out" of 
+  module "cmn_onehot2bin2", instance "u_release_done_index".
+  Expression: entry_release_done_index
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 234
+"arb_vrp #(toy_pack::MSHR_ENTRY_NUM, {toy_pack::MSHR_ENTRY_NUM {1'b1}}, $bits(dataram_rd_pld_t)) u_dataram_rd_arb( .v_vld_s (v_dataramA_rd_vld),  .v_rdy_s (v_dataram_rd_rdy),  .v_pld_s (v_dataram_rd_pld_AB),  .vld_m (arb_dataram_rd_vld),  .rdy_m (arb_dataram_rd_rdy),  .pld_m (arb_dataram_rd_pld));"
+  The following 1-bit expression is connected to 16-bit port "v_vld_s" of 
+  module "arb_vrp", instance "u_dataram_rd_arb".
+  Expression: v_dataramA_rd_vld
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 234
+"arb_vrp #(toy_pack::MSHR_ENTRY_NUM, {toy_pack::MSHR_ENTRY_NUM {1'b1}}, $bits(dataram_rd_pld_t)) u_dataram_rd_arb( .v_vld_s (v_dataramA_rd_vld),  .v_rdy_s (v_dataram_rd_rdy),  .v_pld_s (v_dataram_rd_pld_AB),  .vld_m (arb_dataram_rd_vld),  .rdy_m (arb_dataram_rd_rdy),  .pld_m (arb_dataram_rd_pld));"
+  The following 28-bit expression is connected to 14-bit port "pld_m" of 
+  module "arb_vrp", instance "u_dataram_rd_arb".
+  Expression: arb_dataram_rd_pld
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[0]),  .alloc_rdy (v_alloc_rdy[0]),  .dataram_rd_rdy (v_dataram_rd_rdy[0]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramA_rd_vld[0]),  .dataramA_rd_pld (v_dataramA_rd_pld[0]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramB_rd_vld[0]),  .dataramB_rd_pld (v_dataramB_rd_pld[0]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[0]),  .alloc_rdy (v_alloc_rdy[0]),  .dataram_rd_rdy (v_dataram_rd_rdy[0]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramA_rd_vld[0]),  .dataramA_rd_pld (v_dataramA_rd_pld[0]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramB_rd_vld[0]),  .dataramB_rd_pld (v_dataramB_rd_pld[0]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[0].v_dataramA_rd_vld[0]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[0].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[0].v_dataramB_rd_vld[0]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[0].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[0]),  .alloc_rdy (v_alloc_rdy[0]),  .dataram_rd_rdy (v_dataram_rd_rdy[0]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramA_rd_vld[0]),  .dataramA_rd_pld (v_dataramA_rd_pld[0]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[0].v_dataramB_rd_vld[0]),  .dataramB_rd_pld (v_dataramB_rd_pld[0]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[0].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[0]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[0]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[0]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[1]),  .alloc_rdy (v_alloc_rdy[1]),  .dataram_rd_rdy (v_dataram_rd_rdy[1]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramA_rd_vld[1]),  .dataramA_rd_pld (v_dataramA_rd_pld[1]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramB_rd_vld[1]),  .dataramB_rd_pld (v_dataramB_rd_pld[1]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[1]),  .alloc_rdy (v_alloc_rdy[1]),  .dataram_rd_rdy (v_dataram_rd_rdy[1]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramA_rd_vld[1]),  .dataramA_rd_pld (v_dataramA_rd_pld[1]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramB_rd_vld[1]),  .dataramB_rd_pld (v_dataramB_rd_pld[1]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[1].v_dataramA_rd_vld[1]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[1].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[1].v_dataramB_rd_vld[1]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[1].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[1]),  .alloc_rdy (v_alloc_rdy[1]),  .dataram_rd_rdy (v_dataram_rd_rdy[1]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramA_rd_vld[1]),  .dataramA_rd_pld (v_dataramA_rd_pld[1]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[1].v_dataramB_rd_vld[1]),  .dataramB_rd_pld (v_dataramB_rd_pld[1]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[1].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[1]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[1]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[1]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[2]),  .alloc_rdy (v_alloc_rdy[2]),  .dataram_rd_rdy (v_dataram_rd_rdy[2]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramA_rd_vld[2]),  .dataramA_rd_pld (v_dataramA_rd_pld[2]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramB_rd_vld[2]),  .dataramB_rd_pld (v_dataramB_rd_pld[2]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[2]),  .alloc_rdy (v_alloc_rdy[2]),  .dataram_rd_rdy (v_dataram_rd_rdy[2]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramA_rd_vld[2]),  .dataramA_rd_pld (v_dataramA_rd_pld[2]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramB_rd_vld[2]),  .dataramB_rd_pld (v_dataramB_rd_pld[2]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[2].v_dataramA_rd_vld[2]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[2].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[2].v_dataramB_rd_vld[2]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[2].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[2]),  .alloc_rdy (v_alloc_rdy[2]),  .dataram_rd_rdy (v_dataram_rd_rdy[2]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramA_rd_vld[2]),  .dataramA_rd_pld (v_dataramA_rd_pld[2]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[2].v_dataramB_rd_vld[2]),  .dataramB_rd_pld (v_dataramB_rd_pld[2]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[2].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[2]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[2]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[2]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[3]),  .alloc_rdy (v_alloc_rdy[3]),  .dataram_rd_rdy (v_dataram_rd_rdy[3]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramA_rd_vld[3]),  .dataramA_rd_pld (v_dataramA_rd_pld[3]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramB_rd_vld[3]),  .dataramB_rd_pld (v_dataramB_rd_pld[3]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[3]),  .alloc_rdy (v_alloc_rdy[3]),  .dataram_rd_rdy (v_dataram_rd_rdy[3]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramA_rd_vld[3]),  .dataramA_rd_pld (v_dataramA_rd_pld[3]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramB_rd_vld[3]),  .dataramB_rd_pld (v_dataramB_rd_pld[3]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[3].v_dataramA_rd_vld[3]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[3].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[3].v_dataramB_rd_vld[3]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[3].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[3]),  .alloc_rdy (v_alloc_rdy[3]),  .dataram_rd_rdy (v_dataram_rd_rdy[3]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramA_rd_vld[3]),  .dataramA_rd_pld (v_dataramA_rd_pld[3]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[3].v_dataramB_rd_vld[3]),  .dataramB_rd_pld (v_dataramB_rd_pld[3]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[3].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[3]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[3]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[3]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[4]),  .alloc_rdy (v_alloc_rdy[4]),  .dataram_rd_rdy (v_dataram_rd_rdy[4]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramA_rd_vld[4]),  .dataramA_rd_pld (v_dataramA_rd_pld[4]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramB_rd_vld[4]),  .dataramB_rd_pld (v_dataramB_rd_pld[4]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[4]),  .alloc_rdy (v_alloc_rdy[4]),  .dataram_rd_rdy (v_dataram_rd_rdy[4]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramA_rd_vld[4]),  .dataramA_rd_pld (v_dataramA_rd_pld[4]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramB_rd_vld[4]),  .dataramB_rd_pld (v_dataramB_rd_pld[4]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[4].v_dataramA_rd_vld[4]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[4].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[4].v_dataramB_rd_vld[4]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[4].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[4]),  .alloc_rdy (v_alloc_rdy[4]),  .dataram_rd_rdy (v_dataram_rd_rdy[4]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramA_rd_vld[4]),  .dataramA_rd_pld (v_dataramA_rd_pld[4]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[4].v_dataramB_rd_vld[4]),  .dataramB_rd_pld (v_dataramB_rd_pld[4]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[4].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[4]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[4]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[4]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[5]),  .alloc_rdy (v_alloc_rdy[5]),  .dataram_rd_rdy (v_dataram_rd_rdy[5]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramA_rd_vld[5]),  .dataramA_rd_pld (v_dataramA_rd_pld[5]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramB_rd_vld[5]),  .dataramB_rd_pld (v_dataramB_rd_pld[5]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[5]),  .alloc_rdy (v_alloc_rdy[5]),  .dataram_rd_rdy (v_dataram_rd_rdy[5]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramA_rd_vld[5]),  .dataramA_rd_pld (v_dataramA_rd_pld[5]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramB_rd_vld[5]),  .dataramB_rd_pld (v_dataramB_rd_pld[5]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[5].v_dataramA_rd_vld[5]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[5].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[5].v_dataramB_rd_vld[5]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[5].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[5]),  .alloc_rdy (v_alloc_rdy[5]),  .dataram_rd_rdy (v_dataram_rd_rdy[5]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramA_rd_vld[5]),  .dataramA_rd_pld (v_dataramA_rd_pld[5]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[5].v_dataramB_rd_vld[5]),  .dataramB_rd_pld (v_dataramB_rd_pld[5]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[5].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[5]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[5]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[5]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[6]),  .alloc_rdy (v_alloc_rdy[6]),  .dataram_rd_rdy (v_dataram_rd_rdy[6]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramA_rd_vld[6]),  .dataramA_rd_pld (v_dataramA_rd_pld[6]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramB_rd_vld[6]),  .dataramB_rd_pld (v_dataramB_rd_pld[6]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[6]),  .alloc_rdy (v_alloc_rdy[6]),  .dataram_rd_rdy (v_dataram_rd_rdy[6]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramA_rd_vld[6]),  .dataramA_rd_pld (v_dataramA_rd_pld[6]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramB_rd_vld[6]),  .dataramB_rd_pld (v_dataramB_rd_pld[6]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[6].v_dataramA_rd_vld[6]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[6].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[6].v_dataramB_rd_vld[6]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[6].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[6]),  .alloc_rdy (v_alloc_rdy[6]),  .dataram_rd_rdy (v_dataram_rd_rdy[6]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramA_rd_vld[6]),  .dataramA_rd_pld (v_dataramA_rd_pld[6]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[6].v_dataramB_rd_vld[6]),  .dataramB_rd_pld (v_dataramB_rd_pld[6]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[6].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[6]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[6]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[6]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[7]),  .alloc_rdy (v_alloc_rdy[7]),  .dataram_rd_rdy (v_dataram_rd_rdy[7]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramA_rd_vld[7]),  .dataramA_rd_pld (v_dataramA_rd_pld[7]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramB_rd_vld[7]),  .dataramB_rd_pld (v_dataramB_rd_pld[7]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[7]),  .alloc_rdy (v_alloc_rdy[7]),  .dataram_rd_rdy (v_dataram_rd_rdy[7]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramA_rd_vld[7]),  .dataramA_rd_pld (v_dataramA_rd_pld[7]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramB_rd_vld[7]),  .dataramB_rd_pld (v_dataramB_rd_pld[7]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[7].v_dataramA_rd_vld[7]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[7].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[7].v_dataramB_rd_vld[7]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[7].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[7]),  .alloc_rdy (v_alloc_rdy[7]),  .dataram_rd_rdy (v_dataram_rd_rdy[7]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramA_rd_vld[7]),  .dataramA_rd_pld (v_dataramA_rd_pld[7]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[7].v_dataramB_rd_vld[7]),  .dataramB_rd_pld (v_dataramB_rd_pld[7]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[7].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[7]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[7]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[7]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[8]),  .alloc_rdy (v_alloc_rdy[8]),  .dataram_rd_rdy (v_dataram_rd_rdy[8]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramA_rd_vld[8]),  .dataramA_rd_pld (v_dataramA_rd_pld[8]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramB_rd_vld[8]),  .dataramB_rd_pld (v_dataramB_rd_pld[8]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[8]),  .alloc_rdy (v_alloc_rdy[8]),  .dataram_rd_rdy (v_dataram_rd_rdy[8]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramA_rd_vld[8]),  .dataramA_rd_pld (v_dataramA_rd_pld[8]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramB_rd_vld[8]),  .dataramB_rd_pld (v_dataramB_rd_pld[8]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[8].v_dataramA_rd_vld[8]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[8].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[8].v_dataramB_rd_vld[8]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[8].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[8]),  .alloc_rdy (v_alloc_rdy[8]),  .dataram_rd_rdy (v_dataram_rd_rdy[8]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramA_rd_vld[8]),  .dataramA_rd_pld (v_dataramA_rd_pld[8]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[8].v_dataramB_rd_vld[8]),  .dataramB_rd_pld (v_dataramB_rd_pld[8]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[8].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[8]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[8]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[8]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[9]),  .alloc_rdy (v_alloc_rdy[9]),  .dataram_rd_rdy (v_dataram_rd_rdy[9]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramA_rd_vld[9]),  .dataramA_rd_pld (v_dataramA_rd_pld[9]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramB_rd_vld[9]),  .dataramB_rd_pld (v_dataramB_rd_pld[9]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[9]),  .alloc_rdy (v_alloc_rdy[9]),  .dataram_rd_rdy (v_dataram_rd_rdy[9]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramA_rd_vld[9]),  .dataramA_rd_pld (v_dataramA_rd_pld[9]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramB_rd_vld[9]),  .dataramB_rd_pld (v_dataramB_rd_pld[9]),  .entry_acti ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[9].v_dataramA_rd_vld[9]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[9].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[9].v_dataramB_rd_vld[9]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[9].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[9]),  .alloc_rdy (v_alloc_rdy[9]),  .dataram_rd_rdy (v_dataram_rd_rdy[9]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramA_rd_vld[9]),  .dataramA_rd_pld (v_dataramA_rd_pld[9]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[9].v_dataramB_rd_vld[9]),  .dataramB_rd_pld (v_dataramB_rd_pld[9]),  .entry_acti ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[9].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[9]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[9]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[9]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[10]),  .alloc_rdy (v_alloc_rdy[10]),  .dataram_rd_rdy (v_dataram_rd_rdy[10]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramA_rd_vld[10]),  .dataramA_rd_pld (v_dataramA_rd_pld[10]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramB_rd_vld[10]),  .dataramB_rd_pld (v_dataramB_rd_pld[10]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[10]),  .alloc_rdy (v_alloc_rdy[10]),  .dataram_rd_rdy (v_dataram_rd_rdy[10]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramA_rd_vld[10]),  .dataramA_rd_pld (v_dataramA_rd_pld[10]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramB_rd_vld[10]),  .dataramB_rd_pld (v_dataramB_rd_pld[10]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[10].v_dataramA_rd_vld[10]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[10].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[10].v_dataramB_rd_vld[10]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[10].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[10]),  .alloc_rdy (v_alloc_rdy[10]),  .dataram_rd_rdy (v_dataram_rd_rdy[10]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramA_rd_vld[10]),  .dataramA_rd_pld (v_dataramA_rd_pld[10]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[10].v_dataramB_rd_vld[10]),  .dataramB_rd_pld (v_dataramB_rd_pld[10]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[10].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[10]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[10]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[10]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[11]),  .alloc_rdy (v_alloc_rdy[11]),  .dataram_rd_rdy (v_dataram_rd_rdy[11]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramA_rd_vld[11]),  .dataramA_rd_pld (v_dataramA_rd_pld[11]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramB_rd_vld[11]),  .dataramB_rd_pld (v_dataramB_rd_pld[11]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[11]),  .alloc_rdy (v_alloc_rdy[11]),  .dataram_rd_rdy (v_dataram_rd_rdy[11]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramA_rd_vld[11]),  .dataramA_rd_pld (v_dataramA_rd_pld[11]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramB_rd_vld[11]),  .dataramB_rd_pld (v_dataramB_rd_pld[11]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[11].v_dataramA_rd_vld[11]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[11].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[11].v_dataramB_rd_vld[11]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[11].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[11]),  .alloc_rdy (v_alloc_rdy[11]),  .dataram_rd_rdy (v_dataram_rd_rdy[11]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramA_rd_vld[11]),  .dataramA_rd_pld (v_dataramA_rd_pld[11]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[11].v_dataramB_rd_vld[11]),  .dataramB_rd_pld (v_dataramB_rd_pld[11]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[11].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[11]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[11]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[11]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[12]),  .alloc_rdy (v_alloc_rdy[12]),  .dataram_rd_rdy (v_dataram_rd_rdy[12]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramA_rd_vld[12]),  .dataramA_rd_pld (v_dataramA_rd_pld[12]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramB_rd_vld[12]),  .dataramB_rd_pld (v_dataramB_rd_pld[12]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[12]),  .alloc_rdy (v_alloc_rdy[12]),  .dataram_rd_rdy (v_dataram_rd_rdy[12]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramA_rd_vld[12]),  .dataramA_rd_pld (v_dataramA_rd_pld[12]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramB_rd_vld[12]),  .dataramB_rd_pld (v_dataramB_rd_pld[12]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[12].v_dataramA_rd_vld[12]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[12].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[12].v_dataramB_rd_vld[12]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[12].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[12]),  .alloc_rdy (v_alloc_rdy[12]),  .dataram_rd_rdy (v_dataram_rd_rdy[12]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramA_rd_vld[12]),  .dataramA_rd_pld (v_dataramA_rd_pld[12]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[12].v_dataramB_rd_vld[12]),  .dataramB_rd_pld (v_dataramB_rd_pld[12]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[12].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[12]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[12]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[12]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[13]),  .alloc_rdy (v_alloc_rdy[13]),  .dataram_rd_rdy (v_dataram_rd_rdy[13]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramA_rd_vld[13]),  .dataramA_rd_pld (v_dataramA_rd_pld[13]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramB_rd_vld[13]),  .dataramB_rd_pld (v_dataramB_rd_pld[13]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[13]),  .alloc_rdy (v_alloc_rdy[13]),  .dataram_rd_rdy (v_dataram_rd_rdy[13]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramA_rd_vld[13]),  .dataramA_rd_pld (v_dataramA_rd_pld[13]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramB_rd_vld[13]),  .dataramB_rd_pld (v_dataramB_rd_pld[13]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[13].v_dataramA_rd_vld[13]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[13].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[13].v_dataramB_rd_vld[13]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[13].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[13]),  .alloc_rdy (v_alloc_rdy[13]),  .dataram_rd_rdy (v_dataram_rd_rdy[13]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramA_rd_vld[13]),  .dataramA_rd_pld (v_dataramA_rd_pld[13]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[13].v_dataramB_rd_vld[13]),  .dataramB_rd_pld (v_dataramB_rd_pld[13]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[13].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[13]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[13]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[13]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[14]),  .alloc_rdy (v_alloc_rdy[14]),  .dataram_rd_rdy (v_dataram_rd_rdy[14]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramA_rd_vld[14]),  .dataramA_rd_pld (v_dataramA_rd_pld[14]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramB_rd_vld[14]),  .dataramB_rd_pld (v_dataramB_rd_pld[14]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[14]),  .alloc_rdy (v_alloc_rdy[14]),  .dataram_rd_rdy (v_dataram_rd_rdy[14]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramA_rd_vld[14]),  .dataramA_rd_pld (v_dataramA_rd_pld[14]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramB_rd_vld[14]),  .dataramB_rd_pld (v_dataramB_rd_pld[14]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[14].v_dataramA_rd_vld[14]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[14].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[14].v_dataramB_rd_vld[14]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[14].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[14]),  .alloc_rdy (v_alloc_rdy[14]),  .dataram_rd_rdy (v_dataram_rd_rdy[14]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramA_rd_vld[14]),  .dataramA_rd_pld (v_dataramA_rd_pld[14]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[14].v_dataramB_rd_vld[14]),  .dataramB_rd_pld (v_dataramB_rd_pld[14]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[14].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[14]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[14]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[14]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[15]),  .alloc_rdy (v_alloc_rdy[15]),  .dataram_rd_rdy (v_dataram_rd_rdy[15]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramA_rd_vld[15]),  .dataramA_rd_pld (v_dataramA_rd_pld[15]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramB_rd_vld[15]),  .dataramB_rd_pld (v_dataramB_rd_pld[15]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "A_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry".
+  Expression: A_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[15]),  .alloc_rdy (v_alloc_rdy[15]),  .dataram_rd_rdy (v_dataram_rd_rdy[15]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramA_rd_vld[15]),  .dataramA_rd_pld (v_dataramA_rd_pld[15]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramB_rd_vld[15]),  .dataramB_rd_pld (v_dataramB_rd_pld[15]),  . ... "
+  The following 1-bit expression is connected to 2-bit port "B_hit" of module 
+  "icache_mshr_entry", instance "MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry".
+  Expression: B_hit
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[15].v_dataramA_rd_vld[15]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[15].v_dataramA_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 197.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "MSHR_ENTRY_ARRAY[15].v_dataramB_rd_vld[15]"
+  Bit/Part-select specified for non array variable.
+  Base object: MSHR_ENTRY_ARRAY[15].v_dataramB_rd_vld
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 199.
+
+
+Lint-[PCWM-L] Port connection width mismatch
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+" icache_mshr_entry MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry( .clk (clk),  .rst_n (rst_n),  .A_hit (A_hit),  .B_hit (B_hit),  .A_miss (A_miss),  .B_miss (B_miss),  .bypass_rd_dataramA_vld (bypass_rd_dataramA_vld),  .bypass_rd_dataramB_vld (bypass_rd_dataramA_vld),  .v_A_hazard_bitmap (v_A_hazard_bitmap),  .v_B_hazard_bitmap (v_B_hazard_bitmap),  .A_index_way_checkpass (A_index_way_checkpass),  .B_index_way_checkpass (B_index_way_checkpass),  .alloc_vld (v_alloc_vld[15]),  .alloc_rdy (v_alloc_rdy[15]),  .dataram_rd_rdy (v_dataram_rd_rdy[15]),  .dataramA_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramA_rd_vld[15]),  .dataramA_rd_pld (v_dataramA_rd_pld[15]),  .dataramB_rd_vld (MSHR_ENTRY_ARRAY[15].v_dataramB_rd_vld[15]),  .dataramB_rd_pld (v_dataramB_rd_pld[15]),  . ... "
+  The following 42-bit expression is connected to 43-bit port 
+  "downstream_txreq_pld" of module "icache_mshr_entry", instance 
+  "MSHR_ENTRY_ARRAY[15].u_icache_mshr_entry".
+  Expression: v_downstream_txreq_pld[15]
+  The expression is from module icache_mshr_file, instance u_icache_mshr_file 
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillA_done[15]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillA_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 155.
+
+
+Warning-[INAV] Index into non-array variable
+/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv, 181
+icache_mshr_file, "v_linefillB_done[15]"
+  Bit/Part-select specified for non array variable.
+  Base object: v_linefillB_done
+  Of type: wire
+  Declared at:
+  "/data/usr/xuemy/try/cache_v2/icache_mshr_file.sv", 161.
+
+Starting vcs inline pass...
+
+13 modules and 0 UDP read.
+recompiling module icache_tag_array_ctrl
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+
+Warning-[KDB-ELAB-W] Verdi KDB elaboration with warning
+  Verdi KDB elaboration finished with 0 error(s) and 1 warning(s).
+  Please look at this Verdi elaboration log file for details. 
+  /data/usr/xuemy/try/cache_v2/icache/work/rtl_compile/simv.daidir/elabcomLog/compiler.log
+
+make[1]: Entering directory '/data/usr/xuemy/try/cache_v2/icache/work/rtl_compile/csrc'
+make[1]: Leaving directory '/data/usr/xuemy/try/cache_v2/icache/work/rtl_compile/csrc'
+make[1]: Entering directory '/data/usr/xuemy/try/cache_v2/icache/work/rtl_compile/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv   -no-pie    -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/tools/software/synopsys/vcs/T-2022.06/linux64/lib -L/tools/software/synopsys/vcs/T-2022.06/linux64/lib  -Wl,-rpath-link=./ -Wl,--no-as-needed     _668506_archive_1.so _prev_archive_1.so _cuarc0.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lnuma -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /tools/software/synopsys/vcs/T-2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /tools/software/synopsys/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o /tools/software/synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/data/usr/xuemy/try/cache_v2/icache/work/rtl_compile/csrc'
+CPU time: 1.036 seconds to compile + .315 seconds to elab + .336 seconds to link
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 1 warning(s)
