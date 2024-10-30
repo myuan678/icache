@@ -163,7 +163,7 @@ module icache_mshr_entry
     always_ff@(posedge clk or negedge rst_n) begin
         if(~rst_n)                                            linefill_sentB <= 1'b1;
         else if(allocate_en && |A_hit)                        linefill_sentB <= ~B_miss;
-        else if(linefill_sentA_edge && entry_active )              linefill_sentB <= ~mshr_entry_array.B_miss;
+        else if(linefill_sentA_edge && entry_active )         linefill_sentB <= ~mshr_entry_array.B_miss;
         else if(downstream_txreq_vld && downstream_txreq_rdy) linefill_sentB <= 1'b1;
     end
     assign linefill_2sent = linefill_sentB & linefill_sentA;
@@ -205,19 +205,19 @@ module icache_mshr_entry
 // read request 
 //========================================================
     //assign dataramA_rd_vld           = (linefill_data_2done && hazard_free) | state_rd_dataram_2sent;
-    assign dataramA_rd_vld           = ~state_rd_sent_done && hazard_free;
+    assign dataramA_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent) | ( ~state_rd_sent_done && linefill_data_2done );
     //assign dataramA_rd_vld           = ~state_rd_dataram && hazard_free;
     assign dataramA_rd_pld.rd_way    = mshr_entry_array.dest_wayA                   ;
     assign dataramA_rd_pld.rd_index  = mshr_entry_array.pld.pldA.addr.index         ;  
     assign dataramA_rd_pld.rd_txnid  = mshr_entry_array.pld.pldA.txnid              ;
-    assign dataramB_rd_vld           = ~state_rd_sent_done && hazard_free;                             
+    assign dataramB_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent) | ( ~state_rd_sent_done && linefill_data_2done );                             
     assign dataramB_rd_pld.rd_way    = mshr_entry_array.dest_wayB                   ;
     assign dataramB_rd_pld.rd_index  = mshr_entry_array.pld.pldB.addr.index         ;  
     assign dataramB_rd_pld.rd_txnid  = mshr_entry_array.pld.pldB.txnid              ;
 
     always_ff@(posedge clk or negedge rst_n)begin
         if(~rst_n)                                                                          state_rd_sent_done <= 1'b1;
-        else if(allocate_en )                                                               state_rd_sent_done <= ~entry_active;
+        else if(allocate_en )                                                               state_rd_sent_done <= ~((|A_hit)|(|B_hit)|A_miss|B_miss);
         else if((dataramA_rd_vld && dataram_rd_rdy) | (linefill_data_2done && pref_type))   state_rd_sent_done <= 1'b1;
     end
 

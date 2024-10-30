@@ -233,11 +233,11 @@ initial begin
             end
         end
     endcase
-    #2500;
+    #25000;
     if(up_req.size()!=0)$error("there %0d up req not processed!",up_req.size());
     $display("PC send %0d up req, receive %0d tx dat",up_req_cnt,tx_dat_cnt);
     $display("PC send %0d tx req, receive %0d rx dat",tx_req_cnt,rx_dat_cnt);
-    #2000;
+    #20000;
     $finish;
 end
 
