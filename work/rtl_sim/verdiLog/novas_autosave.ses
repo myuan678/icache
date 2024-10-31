@@ -25,12 +25,12 @@ fdb_proj =
 fdb_campaign = 
 fdb_tool = 
 [hb]
-postSimFile = /home/xuemengyuan/try/cache_v1/icache/work/rtl_sim/wave.fsdb
-syncTime = 710
-viewport = 199 119 1440 775 0 0 275 1438
-activeNode = "icache_top_tb.dut.u_icache_tag_array_ctrl"
-activeScope = "icache_top_tb.dut.u_icache_tag_array_ctrl"
-activeFile = "/home/xuemengyuan/try/cache_v1/icache/icache_tag_array_ctrl.sv"
+postSimFile = /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/wave.fsdb
+syncTime = 1050
+viewport = 76 55 1800 958 0 0 231 1438
+activeNode = "icache_top_tb.dut.u_data_array_ctrl"
+activeScope = "icache_top_tb.dut.u_data_array_ctrl"
+activeFile = "/data/usr/xuemy/try/icache_2r_v1/icache/icache_data_array_ctrl.sv"
 interactiveMode = False
 viewType = Source
 simulatorMode = False
@@ -51,27 +51,24 @@ DnDtraceCrossHierOnly = True
 leadingZero = False
 signalPane = True
 SourceVerticalScrollLines = 5
-Scope1 = "icache_top_tb.dut.u_icache_tag_array_ctrl"
-Scope2 = "icache_top_tb.dut"
-Scope3 = "icache_top_tb.dut.u_data_array_ctrl"
-multipleSelection = 1 11 5 0 0
+Scope1 = "icache_top_tb.dut.u_data_array_ctrl"
 sdfCheckUndef = FALSE
 simFlow = FALSE
 [hb.design]
 importCmd = "-sv" "-dbdir" "simv.daidir" 
-invokeDir = /home/xuemengyuan/try/cache_v1/icache/work/rtl_sim
+invokeDir = /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim
 [hb.sourceTab.1]
-scope = icache_top_tb.dut.u_icache_tag_array_ctrl
-File = /home/xuemengyuan/try/cache_v1/icache/icache_tag_array_ctrl.sv
+scope = icache_top_tb.dut.u_data_array_ctrl
+File = /data/usr/xuemy/try/icache_2r_v1/icache/icache_data_array_ctrl.sv
 Line = 1
 [nMemoryManager]
-WaveformFile = /home/xuemengyuan/try/cache_v1/icache/work/rtl_sim/wave.fsdb
+WaveformFile = /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/wave.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 25 1440 262 192 65
+viewPort = 0 25 1800 385 243 65
 primaryWindow = TRUE
-SessionFile = /home/xuemengyuan/try/cache_v1/icache/work/rtl_sim/verdiLog/novas_autosave.ses.wave.0
+SessionFile = /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE
 hierarchicalName = FALSE
 snap = TRUE

@@ -61,7 +61,8 @@ module icache_mshr_entry
     logic                               state_rd_sent_done      ;
 
 
-    assign alloc_vld      = ~entry_active;
+    assign alloc_vld      = ~entry_active; 
+    assign mshr_entry_array_valid = mshr_entry_array.valid;
     assign entry_active   = mshr_entry_array.valid | first_valid             ;
     assign allocate_en    = bypass_rd_dataramA_vld ? 1'b0 : entry_en;
     assign rxreq_type     = mshr_entry_array.pld.pldA.opcode == UPSTREAM_OPCODE;
@@ -106,9 +107,9 @@ module icache_mshr_entry
     always_ff@(posedge clk or negedge rst_n) begin
         if(~rst_n)                                              mshr_entry_array.valid <= 1'b0;
         else if(allocate_en)                                    mshr_entry_array.valid <= 1'b1;
-        //else if(state_rd_dataram)                               mshr_entry_array.valid <= 1'b0;
-        //else if(state_rd_dataram_2sent | linefill_data_2done)   mshr_entry_array.valid <= 1'b0;
-        //else if(linefill_data_2done && mshr_entry_array.miss)   mshr_entry_array.valid <= 1'b0;   
+        //else if(state_rd_dataram)                             mshr_entry_array.valid <= 1'b0;
+        //else if(state_rd_dataram_2sent | linefill_data_2done) mshr_entry_array.valid <= 1'b0;
+        //else if(linefill_data_2done && mshr_entry_array.miss) mshr_entry_array.valid <= 1'b0;   
         else if(state_rd_sent_done)                             mshr_entry_array.valid <= 1'b0;
         else                                                    mshr_entry_array.valid <= mshr_entry_array.valid;
     end
@@ -119,12 +120,12 @@ module icache_mshr_entry
     always_ff@(posedge clk or negedge rst_n)begin
         if(!rst_n)              v_A_keep_hazard_bitmap <= 'b0;
         else if(allocate_en)    v_A_keep_hazard_bitmap <= v_A_hazard_bitmap;
-        else                    v_A_keep_hazard_bitmap <= v_A_hazard_bitmap &(~v_release_en);
+        else                    v_A_keep_hazard_bitmap <= v_A_keep_hazard_bitmap &(~v_release_en);
     end
     always_ff@(posedge clk or negedge rst_n)begin
         if(!rst_n)              v_B_keep_hazard_bitmap <= 'b0;
         else if(allocate_en)    v_B_keep_hazard_bitmap <= v_B_hazard_bitmap;
-        else                    v_B_keep_hazard_bitmap <= v_B_hazard_bitmap &(~v_release_en);
+        else                    v_B_keep_hazard_bitmap <= v_B_keep_hazard_bitmap &(~v_release_en);
     end
 
     assign A_index_way_release = ((|v_A_keep_hazard_bitmap)==1'b0);
@@ -132,11 +133,11 @@ module icache_mshr_entry
 
     always_ff@(posedge clk or negedge rst_n) begin
         if(~rst_n)        A_hazard_free <= 1'b0;
-        else              A_hazard_free <= (A_index_way_checkpass && allocate_en) || ( A_index_way_release && entry_active);
+        else              A_hazard_free <= (A_index_way_checkpass && allocate_en) || ( A_index_way_release && mshr_entry_array_valid);
     end
     always_ff@(posedge clk or negedge rst_n) begin
         if(~rst_n)        B_hazard_free <= 1'b0;
-        else              B_hazard_free <= (B_index_way_checkpass && allocate_en) || ( B_index_way_release && entry_active);
+        else              B_hazard_free <= (B_index_way_checkpass && allocate_en) || ( B_index_way_release && mshr_entry_array_valid);
     end
     assign hazard_free = A_hazard_free && B_hazard_free;
     //TODO: 关于release_en，需要考虑是否分开AB,是否要做成linefill完一个就释放一个index？
@@ -169,16 +170,27 @@ module icache_mshr_entry
     assign linefill_2sent = linefill_sentB & linefill_sentA;
 
 
+    //always_ff@(posedge clk or negedge rst_n) begin
+    //    if(~rst_n)              linefill_dataA_done <= 1'b1;
+    //    else if(allocate_en )   linefill_dataA_done <= ~A_miss;
+    //    else if(linefillA_done) linefill_dataA_done <= 1'b1;
+    //end
+    //always_ff@(posedge clk or negedge rst_n) begin
+    //    if(~rst_n)                               linefill_dataB_done <= 1'b1;
+    //    else if(allocate_en && A_hit)            linefill_dataB_done <= ~B_miss;
+    //    else if(linefill_sentA_edge && entry_active ) linefill_dataB_done <= ~mshr_entry_array.B_miss;
+    //    else if(linefillB_done)                  linefill_dataB_done <= 1'b1;
+    //end
     always_ff@(posedge clk or negedge rst_n) begin
-        if(~rst_n)              linefill_dataA_done <= 1'b1;
+        if(~rst_n)              linefill_dataA_done <= 1'b0;
         else if(allocate_en )   linefill_dataA_done <= ~A_miss;
         else if(linefillA_done) linefill_dataA_done <= 1'b1;
     end
     always_ff@(posedge clk or negedge rst_n) begin
-        if(~rst_n)                               linefill_dataB_done <= 1'b1;
-        else if(allocate_en && A_hit)            linefill_dataB_done <= ~B_miss;
-        else if(linefill_sentA_edge && entry_active ) linefill_dataB_done <= ~mshr_entry_array.B_miss;
-        else if(linefillB_done)                  linefill_dataB_done <= 1'b1;
+        if(~rst_n)                                      linefill_dataB_done <= 1'b0;
+        else if(allocate_en && A_hit)                   linefill_dataB_done <= ~B_miss;
+        else if(linefill_sentA_edge && entry_active )   linefill_dataB_done <= ~mshr_entry_array.B_miss;
+        else if(linefillB_done)                         linefill_dataB_done <= 1'b1;
     end
 
     
@@ -205,12 +217,12 @@ module icache_mshr_entry
 // read request 
 //========================================================
     //assign dataramA_rd_vld           = (linefill_data_2done && hazard_free) | state_rd_dataram_2sent;
-    assign dataramA_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent) | ( ~state_rd_sent_done && linefill_data_2done );
+    assign dataramA_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent && mshr_entry_array.A_hit&&  mshr_entry_array.B_hit ) | ( ~state_rd_sent_done && linefill_data_2done && ( mshr_entry_array.A_miss |  mshr_entry_array.B_miss) );
     //assign dataramA_rd_vld           = ~state_rd_dataram && hazard_free;
     assign dataramA_rd_pld.rd_way    = mshr_entry_array.dest_wayA                   ;
     assign dataramA_rd_pld.rd_index  = mshr_entry_array.pld.pldA.addr.index         ;  
     assign dataramA_rd_pld.rd_txnid  = mshr_entry_array.pld.pldA.txnid              ;
-    assign dataramB_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent) | ( ~state_rd_sent_done && linefill_data_2done );                             
+    assign dataramB_rd_vld           = (~state_rd_sent_done && state_rd_dataram_2sent && mshr_entry_array.A_hit&&  mshr_entry_array.B_hit ) | ( ~state_rd_sent_done && linefill_data_2done && ( mshr_entry_array.A_miss |  mshr_entry_array.B_miss) );;                             
     assign dataramB_rd_pld.rd_way    = mshr_entry_array.dest_wayB                   ;
     assign dataramB_rd_pld.rd_index  = mshr_entry_array.pld.pldB.addr.index         ;  
     assign dataramB_rd_pld.rd_txnid  = mshr_entry_array.pld.pldB.txnid              ;

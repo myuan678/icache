@@ -533,4 +533,173 @@ used block: 106 [memory(106) file(0)]
                  [ 8K(88) 64K(18) { total 2M bytes } ]
 overhead: (9555) bytes for (106) blocks [Average: (90) bytes/block]
 
-write
+write  => 0(times) 0K(bytes) [0K bytes to file]
+read   => 18(times) 600K(bytes) [94K bytes compressed data from file]
+access => 3176756(times) 25002M(bytes)
+          [hit ratio: 99.9994%]
+
+time: write(0) read(0)  unit: second
+
+swap file directory: (/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/verdiLog)
+used swap file number: (26)
+
+
+
+swap file manager:
+arrSize: (256)
+idxCnt: (28)
+closeHead: (26)
+closeTail: (27)
+openCnt: (1)
+fid(27): fd(31) fileName(/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/verdiLog/_swap_0001#8323329#778399)
+	size(0) lastModTime(0) curModTime(1730217167)
+	mode(w+b)	hot(0) cool(26) pos(0)
+fid(26): fd(0) fileName(NULL)
+	mode(rb)	hot(27) cool(0) pos(0)
+fid(25): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(24): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(23): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(22): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(21): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(20): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(19): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(18): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(17): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(16): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(15): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(14): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(13): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(12): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(11): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(10): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(9): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(8): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(7): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(6): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(5): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(4): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(3): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(2): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(1): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(0): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+Swap system is reset at (Wed Oct 30 00:02:30 2024
+)
+version: (200506)
+
+available memory: 64M bytes
+used memory: 2M bytes [need 576K bytes if disable swap]
+
+used block: 109 [memory(109) file(0)]
+                 [ 8K(90) 64K(19) { total 2M bytes } ]
+overhead: (9555) bytes for (109) blocks [Average: (87) bytes/block]
+
+write  => 0(times) 0K(bytes) [0K bytes to file]
+read   => 19(times) 636K(bytes) [100K bytes compressed data from file]
+access => 3306433(times) 26018M(bytes)
+          [hit ratio: 99.9994%]
+
+time: write(0) read(0)  unit: second
+
+swap file directory: (/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/verdiLog)
+used swap file number: (28)
+
+
+
+swap file manager:
+arrSize: (256)
+idxCnt: (30)
+closeHead: (28)
+closeTail: (29)
+openCnt: (2)
+fid(29): fd(31) fileName(/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/verdiLog/_swap_0001#8323329#778399)
+	size(0) lastModTime(0) curModTime(1730217753)
+	mode(w+b)	hot(0) cool(28) pos(0)
+fid(28): fd(1073741824) fileName(/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/simv.daidir/kdb.elab++/work.lib++/icache_data_array_ctrl.sv.tdc)
+	size(8928) lastModTime(1730217718) curModTime(1730217718)
+	mode(rb)	hot(29) cool(0) pos(0)
+fid(27): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(26): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(25): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(24): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(23): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(22): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(21): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(20): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(19): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(18): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(17): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(16): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(15): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(14): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(13): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(12): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(11): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(10): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(9): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(8): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(7): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(6): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(5): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(4): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(3): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(2): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(1): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+fid(0): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+==================================================
+mySelf(0x1e243de0) pre(0x18742bc0) next((nil))
+version(200506)
+date(Apr 25 2022 02:34:42)

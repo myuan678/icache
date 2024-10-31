@@ -987,3 +987,4 @@ srcSelect -signal "linefill_ack_entry_idx" -line 20 -pos 1 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
 srcSelect -signal "downstream_rxdat_pld" -line 19 -pos 1 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
+debExit

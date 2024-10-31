@@ -114,7 +114,9 @@ module icache_tag_array_ctrl
     assign pre_tag_req_vld = cre_tag_req_vld;
     //assign pre_tag_req_pld 
     assign cre_tag_req_pldA = tag_req_pld;
-    assign cre_tag_req_pldB = align ? tag_req_pld : (tag_req_pld+'h40);
+    assign cre_tag_req_pldB.addr = align ? tag_req_pld.addr : (tag_req_pld.addr+'h40);
+    assign cre_tag_req_pldB.opcode = tag_req_pld.opcode;
+    assign cre_tag_req_pldB.txnid  = tag_req_pld.txnid;
 
     always_ff@(posedge clk or negedge rst_n) begin
         if(~rst_n)begin
@@ -341,10 +343,10 @@ module icache_tag_array_ctrl
                     if((i==tag_req_index) | (i==entry_release_done_index[MSHR_ENTRY_INDEX_WIDTH-1:0]))begin
                        v_A_hazard_bitmap[i] = 1'b0; 
                     end
-                    else if( (req_pld_A.addr.index==vv_mshr_entry_array[i].pld.pldA.addr.index) && (((~A_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayA) | ((A_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayA)))begin
+                    else if( vv_mshr_entry_array[i].valid && (req_pld_A.addr.index==vv_mshr_entry_array[i].pld.pldA.addr.index) && (((~A_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayA) | ((A_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayA)))begin
                         v_A_hazard_bitmap[i] = 1'b1; 
                     end
-                    else if( (req_pld_A.addr.index==vv_mshr_entry_array[i].pld.pldB.addr.index) && (((~A_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayB) | ((A_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayB)))begin
+                    else if( vv_mshr_entry_array[i].valid && (req_pld_A.addr.index==vv_mshr_entry_array[i].pld.pldB.addr.index) && (((~A_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayB) | ((A_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayB)))begin
                         v_A_hazard_bitmap[i] = 1'b1;
                     end
                 end
@@ -361,10 +363,10 @@ module icache_tag_array_ctrl
                     if((i==tag_req_index) | (i==entry_release_done_index[MSHR_ENTRY_INDEX_WIDTH-1:0]))begin
                        v_B_hazard_bitmap[i] = 1'b0; 
                     end
-                    else if( (req_pld_B.addr.index==vv_mshr_entry_array[i].pld.pldA.addr.index) && (((~B_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayA) | ((B_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayA)))begin
+                    else if(vv_mshr_entry_array[i].valid && (req_pld_B.addr.index==vv_mshr_entry_array[i].pld.pldA.addr.index) && (((~B_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayA) | ((B_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayA)))begin
                         v_B_hazard_bitmap[i] = 1'b1; 
                     end
-                    else if( (req_pld_B.addr.index==vv_mshr_entry_array[i].pld.pldB.addr.index) && (((~B_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayB) | ((B_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayB)))begin
+                    else if(vv_mshr_entry_array[i].valid && (req_pld_B.addr.index==vv_mshr_entry_array[i].pld.pldB.addr.index) && (((~B_tag_way0_hit)==vv_mshr_entry_array[i].dest_wayB) | ((B_tag_way1_hit)==vv_mshr_entry_array[i].dest_wayB)))begin
                         v_B_hazard_bitmap[i] = 1'b1;
                     end
                 end
@@ -396,8 +398,8 @@ assign tag_arrayB_dout_vld = tag_arrayB_dout_way0_vld && tag_arrayB_dout_way1_vl
         if (!rst_n) begin  
             lru_a <= 1'b0;  
             lru_b <= 1'b0;  
-            lru[indexA] <= 1'b0;  
-            lru[indexB] <= 1'b0;  
+            lru   <= 'b0;  
+            lru   <= 'b0;  
         end 
         else begin  
             // 更新lru_a和lru[indexA]  

@@ -12,7 +12,7 @@ Command: vcs -sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale
 -l com.log -f /data/usr/xuemy/try/icache_2r_v1/icache/icache_filelist.f -R +WAVE \
 
                          Chronologic VCS (TM)
-         Version T-2022.06_Full64 -- Wed Oct 30 10:41:33 2024
+         Version T-2022.06_Full64 -- Thu Oct 31 14:42:59 2024
 
                     Copyright (c) 1991 - 2022 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -35,14 +35,86 @@ Warning-[DEBUG_DEP] Option will be deprecated
   The option '-debug_all' will be deprecated in a future release.  Please use 
   '-debug_acc+all -debug_region+cell+encrypt' instead.
 
-The design hasn't changed and need not be recompiled. 
-If you really want to, delete file simv.daidir/.vcs.timestamp and
-run VCS again.
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/toy_pack.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_top.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/cmn_lead_one.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/cmn_onehot2bin.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/cmn_onehot2bin2.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_req_arbiter.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/fix_priority_arb.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_tag_pipe_2tagram.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_prefetch_engine.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_mshr_entry.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_mshr_file.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_data_array_ctrl.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/mem/toy_mem_model_bit.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/pre_allocate.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/sync_fifo.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/vrp_arb.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/arb_vrp.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/arb_fp.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/v_en_decode.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/cmn_real_mux_onehot.sv'
+Parsing design file '/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv'
+Top Level Modules:
+       fix_priority_arb
+       icache_prefetch_engine
+       sync_fifo
+       arb_vrp
+       icache_top_tb
+TimeScale is 1 ns / 1 ns
+
+Warning-[IWNF] Implicit wire has no fanin
+/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv, 414
+  Implicit wire 'upstream_txdat_rdy' does not have any driver, please make 
+  sure this is intended.
+
+
+Warning-[IWNF] Implicit wire has no fanin
+/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv, 434
+  Implicit wire 'pref_to_mshr_req_rdy' does not have any driver, please make 
+  sure this is intended.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv, 408
+"icache_top dut( .clk (clk),  .rst_n (rst_n),  .prefetch_enable (prefetch_enable),  .upstream_txdat_data (upstream_txdat_data),  .upstream_txdat_vld (upstream_txdat_vld),  .upstream_txdat_rdy (upstream_txdat_rdy),  .upstream_txdat_txnid (upstream_txdat_txnid),  .upstream_rxreq_vld (upstream_rxreq_vld),  .upstream_rxreq_rdy (upstream_rxreq_rdy),  .upstream_rxreq_pld (upstream_rxreq_pld),  .downstream_rxsnp_vld (downstream_rxsnp_vld),  .downstream_rxsnp_rdy (downstream_rxsnp_rdy),  .downstream_rxsnp_pld (downstream_rxsnp_pld),  .downstream_txreq_vld (downstream_txreq_vld),  .downstream_txreq_rdy (downstream_txreq_rdy),  .downstream_txreq_pld (downstream_txreq_pld),  .downstream_txreq_entry_id (downstream_txreq_entry_id),  .downstream_txrsp_vld (downstream_ ... "
+  The following 32-bit expression is connected to 42-bit port 
+  "prefetch_req_pld" of module "icache_top", instance "dut".
+  Expression: 'b0
+  Instantiated module defined at: 
+  "/data/usr/xuemy/try/icache_2r_v1/icache/icache_top.sv", 1
+  Use +lint=PCWM for more details.
+
+Starting vcs inline pass...
+
+13 modules and 0 UDP read.
+recompiling module icache_tag_array_ctrl
+recompiling module icache_mshr_entry
+Both modules done.
+	However, due to incremental compilation, only 2 modules need to be compiled. 
+make[1]: Entering directory '/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv   -no-pie    -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/tools/software/synopsys/vcs/T-2022.06/linux64/lib -L/tools/software/synopsys/vcs/T-2022.06/linux64/lib \
+-Wl,-rpath-link=./ -Wl,--no-as-needed     _906115_archive_1.so _prev_archive_1.so \
+_cuarc0.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o           -lnuma -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew \
+-lsimprofile -luclinative /tools/software/synopsys/vcs/T-2022.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/tools/software/synopsys/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o /tools/software/synopsys/verdi/T-2022.06/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/csrc' \
 
 Command: /data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/./simv +v2k -a com.log +WAVE
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Oct 30 10:41 2024
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Oct 31 14:43 2024
 *Verdi* Loading libsscore_vcs202206.so
 FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
 (C) 1996 - 2022 by Synopsys, Inc.
@@ -62,42 +134,39 @@ send_upstream_req: tag=          4, index=          1, id=          4
 send a up req, tag=00000004, index=00000004, id=00000004,                  630
 send_upstream_req: tag=          5, index=          1, id=          5
 send a up req, tag=00000005, index=00000005, id=00000005,                  690
-downstream_rxdat = 0000407f                    710, nid=1,remain pkt=7
+downstream_rxdat = 0000407f                    710, nid=1,remain pkt=3
 send_upstream_req: tag=          1, index=          2, id=          6
 send a up req, tag=00000006, index=00000006, id=00000006,                  750
-Error: "/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv", 336: icache_top_tb.unnamed$$_14.unnamed$$_15: at time 750 ns
-compare error when txnid=5
 send_upstream_req: tag=          4, index=          2, id=          7
 send a up req, tag=00000007, index=00000007, id=00000007,                  810
 send_upstream_req: tag=          1, index=          1, id=          8
 send a up req, tag=00000008, index=00000008, id=00000008,                  870
 send_upstream_req: tag=          4, index=          1, id=          9
 send a up req, tag=00000009, index=00000009, id=00000009,                  930
-downstream_rxdat = 0000407f                    990, nid=1,remain pkt=13
-Error: "/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv", 336: icache_top_tb.unnamed$$_14.unnamed$$_15: at time 1070 ns
-compare error when txnid=1
-downstream_rxdat = 0001407f                   1250, nid=2,remain pkt=13
-downstream_rxdat = 0001407f                   1530, nid=2,remain pkt=12
+downstream_rxdat = 0000407f                    990, nid=1,remain pkt=2
+txnid  1 compare pass
+downstream_rxdat = 000140bf                   1250, nid=3,remain pkt=3
+downstream_rxdat = 000140bf                   1530, nid=3,remain pkt=2
+txnid  3 compare pass
+downstream_rxdat = 0001407f                   1810, nid=2,remain pkt=3
+downstream_rxdat = 0001407f                   2070, nid=2,remain pkt=2
 txnid  2 compare pass
-downstream_rxdat = 000140bf                   1810, nid=3,remain pkt=11
-downstream_rxdat = 000140bf                   2070, nid=3,remain pkt=10
-Error: "/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv", 336: icache_top_tb.unnamed$$_14.unnamed$$_15: at time 2150 ns
-compare error when txnid=3
-downstream_rxdat = 0001007f                   2330, nid=4,remain pkt=9
-downstream_rxdat = 0001007f                   2610, nid=4,remain pkt=8
-txnid  4 compare pass
-downstream_rxdat = 000040bf                   2890, nid=6,remain pkt=7
-downstream_rxdat = 000040bf                   3150, nid=6,remain pkt=6
+downstream_rxdat = 000040bf                   2330, nid=6,remain pkt=3
+downstream_rxdat = 000040bf                   2610, nid=6,remain pkt=2
 txnid  6 compare pass
-downstream_rxdat = 000100bf                   3430, nid=7,remain pkt=5
-downstream_rxdat = 000100bf                   3710, nid=7,remain pkt=4
-txnid  7 compare pass
-downstream_rxdat = 0000407f                   3990, nid=8,remain pkt=3
-downstream_rxdat = 0000407f                   4270, nid=8,remain pkt=2
-txnid  8 compare pass
-downstream_rxdat = 0001007f                   4550, nid=9,remain pkt=1
-downstream_rxdat = 0001007f                   4830, nid=9,remain pkt=0
+downstream_rxdat = 0001007f                   2890, nid=4,remain pkt=3
+downstream_rxdat = 0001007f                   3150, nid=4,remain pkt=2
+txnid  4 compare pass
 txnid  9 compare pass
+downstream_rxdat = 000100bf                   3430, nid=7,remain pkt=3
+downstream_rxdat = 000100bf                   3710, nid=7,remain pkt=2
+txnid  7 compare pass
+downstream_rxdat = 0001407f                   3990, nid=5,remain pkt=1
+downstream_rxdat = 0001407f                   4270, nid=5,remain pkt=0
+txnid  5 compare pass
+downstream_rxdat = 0000407f                   4610, nid=8,remain pkt=1
+downstream_rxdat = 0000407f                   4890, nid=8,remain pkt=0
+txnid  8 compare pass
 PC send 9 up req, receive 9 tx dat
 PC send 16 tx req, receive 16 rx dat
 $finish called from file "/data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv", line 241.
@@ -105,5 +174,6 @@ $finish at simulation time                45930
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 45930 ns
 CPU Time:      0.280 seconds;       Data structure size:   0.1Mb
-Wed Oct 30 10:41:37 2024
-CPU time: .319 seconds in simulation
+Thu Oct 31 14:43:07 2024
+CPU time: 1.171 seconds to compile + .355 seconds to elab + .350 seconds to link + .323 seconds in simulation
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)
