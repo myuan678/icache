@@ -64,7 +64,7 @@ module icache_top_tb();
         upstream_rxreq_vld              <= 1;
         upstream_rxreq_pld.addr.tag     <= tag;
         upstream_rxreq_pld.addr.index   <= index;
-        upstream_rxreq_pld.addr.offset  <= {ICACHE_OFFSET_WIDTH{1'b1}};
+        upstream_rxreq_pld.addr.offset  <= {{(ICACHE_OFFSET_WIDTH-1){1'b1}},1'b0};
         upstream_rxreq_pld.opcode       <= UPSTREAM_OPCODE;
         upstream_rxreq_pld.txnid        <= id;
         $display("send_upstream_req: tag=%d, index=%d, id=%d", tag, index, id);
@@ -166,8 +166,8 @@ initial begin
             end   
         end
         3:begin //random read(miss)/(hit) for addr conflict
-            for(int i=1; i<10; i++)begin
-                tag   = $urandom_range(1,5);
+            for(int i=1; i<30; i++)begin
+                tag   = $urandom_range(1,3);
                 index = $urandom_range(1,2);
                 txnid = i%32;
                 @(posedge clk);

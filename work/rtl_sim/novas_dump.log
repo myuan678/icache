@@ -139,7 +139,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8194 kbytes
+stacksize		8192 kbytes
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -151,15 +151,13 @@ maxproc		240558
 
 Runtime environment variables:
 SHELL=/bin/bash
-COLORTERM=truecolor
 VCS_ARCH_OVERRIDE=linux
 SYNOPSYS=/tools/software/synopsys/syn/T-2022.03-SP2
-TERM_PROGRAM_VERSION=1.95.0
 SNPS_INTERNAL_VCS_LINUX_OS=ubuntu
-SNPS_VCS_INTERNAL_ROOT_START_TIME=1730356978.856752987
+SNPS_VCS_INTERNAL_ROOT_START_TIME=1730441654.388474421
 VCS_HOME=/tools/software/synopsys/vcs/T-2022.06
 SPYGLASS_HOME=/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME
-MAKE_TERMOUT=/dev/pts/7
+MAKE_TERMOUT=/dev/pts/15
 MODULES_LMCONFLICT=synopsys_lic&synopsys_lic:vcs/T-2022.06&vcs:spyglass/T-2022.06-1&spyglass:verdi/T-2022.06&verdi:fde/1.3&fde:syn/T-2022.03-SP2&syn
 SCRIPT_NAME=vcs
 _LMFILES__modshare=/usr/share/modules/modulefiles/vcs/T-2022.06:1:/usr/share/modules/modulefiles/spyglass/T-2022.06-1:1:/usr/share/modules/modulefiles/syn/T-2022.03-SP2:1:/usr/share/modules/modulefiles/synopsys_lic:1:/usr/share/modules/modulefiles/verdi/T-2022.06:1:/usr/share/modules/modulefiles/fde/1.3:1
@@ -176,7 +174,6 @@ MANPATH=:
 SNPS_VCS_INTERNAL_UBUNTU_PRE_LDFLAGS= -no-pie 
 TCLLIBPATH=/tools/software/fde/fde_1p3/tcl
 TCLLIBPATH_modshare=/tools/software/fde/fde_1p3/tcl:1
-VSCODE_GIT_ASKPASS_NODE=/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/node
 MOTD_SHOWN=pam
 HOME=/home/xuemengyuan
 LANG=en_US.UTF-8
@@ -184,19 +181,16 @@ MODULES_LMNOTUASKED_modshare=synopsys_lic:1
 UNAME=/bin/uname
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
-SSL_CERT_DIR=/usr/lib/ssl/certs
-GIT_ASKPASS=/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/extensions/git/dist/askpass.sh
 VMR_MODE_FLAG=64
 TOOL_HOME=/tools/software/synopsys/vcs/T-2022.06/linux64
-SSH_CONNECTION=127.0.0.1 58628 127.0.0.1 22
-SNPS_VCS_TMPDIR=/tmp/vcs_20241031064258_905627
+SSH_CONNECTION=127.0.0.1 50740 127.0.0.1 22
+SNPS_VCS_TMPDIR=/tmp/vcs_20241101061414_942671
 VCS_LOG_FILE=com.log
 MFLAGS=
 OVA_UUM=0
 MODULES_LMNOTUASKED=synopsys_lic
-PATH_modshare=/tools/software/fde/fde_1p3:1:/usr/bin:1:/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/bin/remote-cli:1:/tools/software/synopsys/syn/T-2022.03-SP2/bin:1:/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:1:/usr/local/bin:1:/bin:1:/tools/software/qemu/bin:1:/snap/bin:1:/sbin:1:/tools/software/synopsys/verdi/T-2022.06/bin:1:/usr/sbin:1:/usr/games:1:/usr/local/sbin:1:/tools/software/synopsys/vcs/T-2022.06/bin:1:/usr/local/games:1
-VSCODE_GIT_ASKPASS_EXTRA_ARGS=
-TURBO_LOG_DIR=/tmp/vcs_20241031064258_905627
+PATH_modshare=/tools/software/fde/fde_1p3:1:/usr/bin:1:/tools/software/synopsys/syn/T-2022.03-SP2/bin:1:/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:1:/usr/local/bin:1:/bin:1:/tools/software/qemu/bin:1:/snap/bin:1:/sbin:1:/tools/software/synopsys/verdi/T-2022.06/bin:1:/usr/sbin:1:/usr/games:1:/usr/local/sbin:1:/tools/software/synopsys/vcs/T-2022.06/bin:1:/usr/local/games:1
+TURBO_LOG_DIR=/tmp/vcs_20241101061414_942671
 MODULEPATH_modshare=/etc/environment-modules/modules:1:/usr/share/modules/$MODULE_VERSION/modulefiles:1:/usr/share/modules/modulefiles:1:/usr/share/modules/versions:1
 LESSCLOSE=/usr/bin/lesspipe %s %s
 XDG_SESSION_CLASS=user
@@ -209,43 +203,39 @@ TERM=xterm-basic
 FDE_HOME=/tools/software/fde/fde_1p3
 LESSOPEN=| /usr/bin/lesspipe %s
 USER=xuemengyuan
-MAKE_TERMERR=/dev/pts/7
-VSCODE_GIT_IPC_HANDLE=/run/user/1014/vscode-git-0f62fb6515.sock
-SNPS_VCS_INTERNAL_ROOT_PID=905627
+MAKE_TERMERR=/dev/pts/15
+SNPS_VCS_INTERNAL_ROOT_PID=942671
 LOADEDMODULES=synopsys_lic:vcs/T-2022.06:spyglass/T-2022.06-1:verdi/T-2022.06:fde/1.3:syn/T-2022.03-SP2
 SCRNAME=vcs
 MODULES_LMCONFLICT_modshare=synopsys_lic&synopsys_lic:1:vcs/T-2022.06&vcs:1:verdi/T-2022.06&verdi:1:fde/1.3&fde:1:spyglass/T-2022.06-1&spyglass:1:syn/T-2022.03-SP2&syn:1
 MODULES_LMPREREQ_modshare=syn/T-2022.03-SP2&synopsys_lic:1:verdi/T-2022.06&synopsys_lic:1:vcs/T-2022.06&synopsys_lic:1:spyglass/T-2022.06-1&synopsys_lic:1
-SHLVL=5
+DISPLAY=localhost:10.0
+SHLVL=3
 BASH_ENV=/usr/share/modules/init/bash
 MAKELEVEL=1
-XDG_SESSION_ID=2039
+XDG_SESSION_ID=2250
 LM_LICENSE_FILE=27020@localhost
 VCS_MODE_FLAG=64
 LD_LIBRARY_PATH=/tools/software/synopsys/vcs/T-2022.06/lib:/tools/software/synopsys/vcs/T-2022.06/linux64/lib:
 VCS_MX_HOME_INTERNAL=1
 XDG_RUNTIME_DIR=/run/user/1014
-SSL_CERT_FILE=/usr/lib/ssl/certs/ca-certificates.crt
-SSH_CLIENT=127.0.0.1 58628 22
+SSH_CLIENT=127.0.0.1 50740 22
 VCS_ARG_ADDED_FOR_TMP=1
 SNPS_VCS_CLANG_PATH=/tools/software/synopsys/vcs/T-2022.06/linux64/clang
 LC_ALL=C
-VSCODE_GIT_ASKPASS_MAIN=/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/extensions/git/dist/askpass-main.js
 DVE_HOME=/tools/software/synopsys/vcs/T-2022.06
 XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
 VCS_COM=/tools/software/synopsys/vcs/T-2022.06/linux64/bin/vcs1
-BROWSER=/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/bin/helpers/browser.sh
 VCS_USER_OPTIONS=-sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /data/usr/xuemy/try/icache_2r_v1/icache/icache_filelist.f -R +WAVE
-PATH=.:/tools/software/synopsys/syn/T-2022.03-SP2/bin:/tools/software/fde/fde_1p3:/tools/software/synopsys/verdi/T-2022.06/bin:/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/tools/software/synopsys/vcs/T-2022.06/bin:/home/xuemengyuan/.vscode-server/cli/servers/Stable-912bb683695358a54ae0c670461738984cbb5b95/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tools/software/qemu/bin:/tools/software/qemu/bin
+PATH=.:/tools/software/synopsys/syn/T-2022.03-SP2/bin:/tools/software/fde/fde_1p3:/tools/software/synopsys/verdi/T-2022.06/bin:/tools/software/synopsys/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/tools/software/synopsys/vcs/T-2022.06/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tools/software/qemu/bin
 MODULEPATH=/etc/environment-modules/modules:/usr/share/modules/versions:/usr/share/modules/$MODULE_VERSION/modulefiles:/usr/share/modules/modulefiles
 _LMFILES_=/usr/share/modules/modulefiles/synopsys_lic:/usr/share/modules/modulefiles/vcs/T-2022.06:/usr/share/modules/modulefiles/spyglass/T-2022.06-1:/usr/share/modules/modulefiles/verdi/T-2022.06:/usr/share/modules/modulefiles/fde/1.3:/usr/share/modules/modulefiles/syn/T-2022.03-SP2
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1014/bus
 VCS_DEPTH=0
-SNPS_VCS_INTERNAL_CURR_PID=905627
+SSH_TTY=/dev/pts/15
+SNPS_VCS_INTERNAL_CURR_PID=942671
 OLDPWD=/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/simv.daidir/debug_dump/fsearch
 MODULES_CMD=/usr/lib/x86_64-linux-gnu/modulecmd.tcl
-TERM_PROGRAM=vscode
-VSCODE_IPC_HOOK_CLI=/run/user/1014/vscode-ipc-a8b4814f-8838-4528-a745-e04f517f531a.sock
 BASH_FUNC_switchml%%=() {  typeset swfound=1;
  if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
  typeset swname='main';
@@ -269,7 +259,9 @@ BASH_FUNC_switchml%%=() {  typeset swfound=1;
  return 1;
  fi
 }
-BASH_FUNC_module%%=() {  unset _mlshdbg;
+BASH_FUNC_module%%=() {  _module_raw "$@" 2>&1
+}
+BASH_FUNC__module_raw%%=() {  unset _mlshdbg;
  if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
  case "$-" in 
  *v*x*)
@@ -334,88 +326,88 @@ argv[1]=+v2k
 argv[2]=-a
 argv[3]=com.log
 argv[4]=+WAVE
-262 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.210 user,  327.27M mem
-263 Elapsed time:    0:00:03    Thu Oct 31 14:43:07 2024
-264 User CPU time used: 0 seconds
-265 System CPU time used: 0 seconds
-266 pliAppInit
-267 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
-268 FSDB_GATE is set.
-269 FSDB_RTL is set.
-270 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
-271 Enable Parallel Dumping.
-272 pliAppMiscSet: New Sim Round
-273 pliEntryInit
-274 LIBSSCORE=found /tools/software/synopsys/verdi/T-2022.06/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
-275 FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
-276 (C) 1996 - 2022 by Synopsys, Inc.
-277 sps_call_fsdbDumpfile_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(439)
-278 argv[0]: (wave.fsdb)
-279 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-280 *Verdi* : Create FSDB file 'wave.fsdb'
-281 [spi_vcs_vd_ppi_create_root]: no upf option
-282 compile option from '/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/simv.daidir/vcs_rebuild'.
-283   "vcs '-sverilog' '-kdb' '+v2k' '-debug_access+all' '-debug_all' '-full64' '-timescale=1ns/1ns' '-l' 'com.log' '-f' '/data/usr/xuemy/try/icache_2r_v1/icache/icache_filelist.f' '-R' '+WAVE' 2>&1"
-284 DVDI_is_vir_unload_enabled is enable
-285 FSDB_VCS_ENABLE_NATIVE_VC is enable
-286 sps_call_fsdbDumpvars_vd_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(440)
-287 argv[0]: (+all)
-288 *Verdi* : Begin traversing the scopes, layer (0).
-289 *Verdi* : Enable +all dumping.
-290 *Verdi* : End of traversing.
-291 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.230 user,  427.40M mem
-                   incr: 0.000 sys,  0.020 user,  8.41M mem
-                   accu: 0.000 sys,  0.020 user,  8.41M mem
-              accu incr: 0.000 sys,  0.020 user,  8.41M mem
+253 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.220 user,  327.27M mem
+254 Elapsed time:    0:00:03    Fri Nov  1 14:14:24 2024
+255 User CPU time used: 0 seconds
+256 System CPU time used: 0 seconds
+257 pliAppInit
+258 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+259 FSDB_GATE is set.
+260 FSDB_RTL is set.
+261 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+262 Enable Parallel Dumping.
+263 pliAppMiscSet: New Sim Round
+264 pliEntryInit
+265 LIBSSCORE=found /tools/software/synopsys/verdi/T-2022.06/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
+266 FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
+267 (C) 1996 - 2022 by Synopsys, Inc.
+268 sps_call_fsdbDumpfile_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(439)
+269 argv[0]: (wave.fsdb)
+270 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+271 *Verdi* : Create FSDB file 'wave.fsdb'
+272 [spi_vcs_vd_ppi_create_root]: no upf option
+273 compile option from '/data/usr/xuemy/try/icache_2r_v1/icache/work/rtl_sim/simv.daidir/vcs_rebuild'.
+274   "vcs '-sverilog' '-kdb' '+v2k' '-debug_access+all' '-debug_all' '-full64' '-timescale=1ns/1ns' '-l' 'com.log' '-f' '/data/usr/xuemy/try/icache_2r_v1/icache/icache_filelist.f' '-R' '+WAVE' 2>&1"
+275 DVDI_is_vir_unload_enabled is enable
+276 FSDB_VCS_ENABLE_NATIVE_VC is enable
+277 sps_call_fsdbDumpvars_vd_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(440)
+278 argv[0]: (+all)
+279 *Verdi* : Begin traversing the scopes, layer (0).
+280 *Verdi* : Enable +all dumping.
+281 *Verdi* : End of traversing.
+282 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.240 user,  427.39M mem
+                   incr: 0.010 sys,  0.020 user,  8.41M mem
+                   accu: 0.010 sys,  0.020 user,  8.41M mem
+              accu incr: 0.010 sys,  0.020 user,  8.41M mem
 
           Count usage: 4365 var,  4365 idcode,  652 callback
                  incr: 4365 var,  4365 idcode,  652 callback
                  accu: 4365 var,  4365 idcode,  652 callback
             accu incr: 4365 var,  4365 idcode,  652 callback
-292 Elapsed time:    0:00:03    Thu Oct 31 14:43:07 2024
-293 User CPU time used: 0 seconds
-294 System CPU time used: 0 seconds
-295 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.040 sys,  0.230 user,  428.45M mem
+283 Elapsed time:    0:00:03    Fri Nov  1 14:14:24 2024
+284 User CPU time used: 0 seconds
+285 System CPU time used: 0 seconds
+286 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.030 sys,  0.240 user,  428.45M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.020 user,  9.46M mem
+                   accu: 0.010 sys,  0.020 user,  9.46M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 4365 var,  4365 idcode,  652 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 4365 var,  4365 idcode,  652 callback
             accu incr: 0 var,  0 idcode,  0 callback
-296 Elapsed time:    0:00:03    Thu Oct 31 14:43:07 2024
-297 User CPU time used: 0 seconds
-298 System CPU time used: 0 seconds
-299 sps_call_fsdbDumpon_vd_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(442)
-300 *Verdi* : fsdbDumpon - All FSDB files at 0 ns.
-301 End of simulation at 45930
-302 Memory usage: 428.450 M
-303 Maximum resident set size: 117 MB
-304 Hard page faults: 0
-305 Soft page faults: 16587
-306 Elapsed time:    0:00:03    Thu Oct 31 14:43:07 2024
-307 User CPU time used: 0 seconds
-308 System CPU time used: 0 seconds
-309 Begin FSDB profile info:
-310 FSDB Writer : bc1(17331) bcn(30759) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.007268) io wait(0.000000) theadpool wait(0.000000)
+287 Elapsed time:    0:00:03    Fri Nov  1 14:14:24 2024
+288 User CPU time used: 0 seconds
+289 System CPU time used: 0 seconds
+290 sps_call_fsdbDumpon_vd_main at 0 : /data/usr/xuemy/try/icache_2r_v1/icache/icache_top_v2_tb.sv(442)
+291 *Verdi* : fsdbDumpon - All FSDB files at 0 ns.
+292 End of simulation at 48890
+293 Memory usage: 428.446 M
+294 Maximum resident set size: 118 MB
+295 Hard page faults: 0
+296 Soft page faults: 16720
+297 Elapsed time:    0:00:03    Fri Nov  1 14:14:24 2024
+298 User CPU time used: 0 seconds
+299 System CPU time used: 0 seconds
+300 Begin FSDB profile info:
+301 FSDB Writer : bc1(38876) bcn(80595) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.008247) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-311 End FSDB profile info
-312 FSDB closed. Name: wave.fsdb Size: 66668
-313 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-314                      - BlockUsed:1 Acquire:17156 BufferUsed:289825
-315                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:0
-316                      - MainProducerTime:0.276827974 TotalConsumerTime:0.000000000
-317                      - ElapsedTime:0.068278000
-318 Producer   0 profile - BlockUsed:1 Acquire:17156 BufferUsed:289825
-319 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
-320                      - BlockUsed:1 Acquire:17156 BufferUsed:289825
-321 SimExit
-322 Elapsed time:    0:00:03    Thu Oct 31 14:43:07 2024
-323 User CPU time used: 0 seconds
-324 System CPU time used: 0 seconds
-325 Sim process exit
+302 End FSDB profile info
+303 FSDB closed. Name: wave.fsdb Size: 82591
+304 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+305                      - BlockUsed:1 Acquire:28559 BufferUsed:549991
+306                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:0
+307                      - MainProducerTime:0.287369583 TotalConsumerTime:0.000000000
+308                      - ElapsedTime:0.080229000
+309 Producer   0 profile - BlockUsed:1 Acquire:28559 BufferUsed:549991
+310 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
+311                      - BlockUsed:1 Acquire:28559 BufferUsed:549991
+312 SimExit
+313 Elapsed time:    0:00:03    Fri Nov  1 14:14:24 2024
+314 User CPU time used: 0 seconds
+315 System CPU time used: 0 seconds
+316 Sim process exit
