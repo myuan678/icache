@@ -1,26 +1,54 @@
-RTL_COMPILE_OUTPUT 	= /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/work/rtl_compile
-RTL_SIM_OUTPUT      = /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/work/rtl_sim
-RTL_SIM_COV         = /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/work/rtl_sim_cov
-RTL_NEWSIM_OUTPUT   = /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/work/rtl_new_sim
-VERILATOR           = /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/work/verilator	
+CURRENT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+export PRJ_PATH = $(CURRENT_DIR)
+
+
+RTL_COMPILE_OUTPUT 	= $(CURRENT_DIR)/work/rtl_compile
+RTL_SIM_OUTPUT      = $(CURRENT_DIR)/work/rtl_sim
+RTL_SIM_COV         = $(CURRENT_DIR)/work/rtl_sim_cov
+RTL_NEWSIM_OUTPUT   = $(CURRENT_DIR)/work/rtl_new_sim
+VERILATOR           = $(CURRENT_DIR)/work/verilator	
+
+
+
+TESTBENCH_DIR := $(abspath testbench)
+VCS_COMMAND			= vcs -sverilog -lca -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log
+
+RTL_FILELIST		= $(CURRENT_DIR)/rtl/rtl_filelist.f
 
 .PHONY: compile lint
 
 compile:
 	mkdir -p $(RTL_COMPILE_OUTPUT)
-	cd $(RTL_COMPILE_OUTPUT) ;vcs -kdb -full64 -debug_access -sverilog -f /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/icache_compile.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM
+	cd $(RTL_COMPILE_OUTPUT) ; $(VCS_COMMAND) -f $(RTL_FILELIST) +lint=PCWM +lint=TFIPC-L +define+TOY_SIM
 
 sim:
 	mkdir -p $(RTL_SIM_OUTPUT)
-	cd $(RTL_SIM_OUTPUT); vcs -sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /data/usr/xuemy/try/icache_for_scalar/icache/icache_filelist.f -R +WAVE
+	cd $(RTL_SIM_OUTPUT); $(VCS_COMMAND) -f $(RTL_FILELIST) $(CURRENT_DIR)/testbench/tb_top.sv -R +WAVE +incdir+$(TESTBENCH_DIR)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 new_sim:
 	mkdir -p $(RTL_NEWSIM_OUTPUT)
-	cd $(RTL_NEWSIM_OUTPUT); vcs -sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/icache_sim_filelist.f -R +WAVE
-
+	cd $(RTL_NEWSIM_OUTPUT); $(VCS_COMMAND) -f /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/icache_sim_filelist.f -R +WAVE
 
 sim_cov:
 	mkdir -p $(RTL_SIM_COV)
-	cd $(RTL_SIM_COV); vcs -sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/icache_filelist.f -cm line+cond+fsm+branch+tgl -R +WAVE -cm_name simv -cm_dir ./coverage
+	cd $(RTL_SIM_COV); $(VCS_COMMAND) -f /data/usr/xuemy/try/cache_v1/icache_v1_1008_release/icache_filelist.f -cm line+cond+fsm+branch+tgl -R +WAVE -cm_name simv -cm_dir ./coverage
 
 ver:
 	verilator -f icache_filelist.f
