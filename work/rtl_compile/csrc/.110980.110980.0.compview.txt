@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1723794306.079207257, "rt":3.27, "ut":0.44, "st":0.15}}
-{"vcselab":{"timestamp_begin":1723794309.418834901, "rt":2.87, "ut":0.22, "st":0.06}}
-{"link":{"timestamp_begin":1723794312.349081190, "rt":0.24, "ut":0.18, "st":0.04}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1723794305.609338798}
-{"VCS_COMP_START_TIME": 1723794305.609338798}
-{"VCS_COMP_END_TIME": 1723794312.745931220}
-{"VCS_USER_OPTIONS": "-kdb -full64 -debug_access -sverilog -f /home/xuemengyuan/try/cache_v1/icache/icache_lint.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM"}
-{"vcs1": {"peak_mem": 111377}}
-{"stitch_vcselab": {"peak_mem": 111471}}

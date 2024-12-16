@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1723541910.190943081, "rt":3.52, "ut":0.66, "st":0.17}}
-{"vcselab":{"timestamp_begin":1723541913.812676791, "rt":3.59, "ut":0.24, "st":0.11}}
-{"link":{"timestamp_begin":1723541917.483102696, "rt":0.42, "ut":0.26, "st":0.08}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1723541909.482714588}
-{"VCS_COMP_START_TIME": 1723541909.482714588}
-{"VCS_COMP_END_TIME": 1723541922.750946596}
-{"VCS_USER_OPTIONS": "-sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /home/xuemengyuan/try/cache_v1/icache/icache_filelist.f -R +WAVE"}
-{"vcs1": {"peak_mem": 2510109}}
-{"stitch_vcselab": {"peak_mem": 2510196}}

@@ -1,7 +1,0 @@
-Command exited with non-zero status 255
-{"vcs1":{"timestamp_begin":1723794207.686915077, "rt":1.95, "ut":0.13, "st":0.09}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1723794207.202062688}
-{"VCS_COMP_START_TIME": 1723794207.202062688}
-{"VCS_COMP_END_TIME": 1723794209.729340154}
-{"VCS_USER_OPTIONS": "-kdb -full64 -debug_access -sverilog -f /home/xuemengyuan/try/cache_v1/icache/icache_lint.f +lint=PCWM +lint=TFIPC-L +define+TOY_SIM"}
-{"vcs1": {"peak_mem": 110123}}

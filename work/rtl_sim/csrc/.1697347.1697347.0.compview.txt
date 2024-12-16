@@ -1,5 +1,0 @@
-{"vcs1":{"timestamp_begin":1722949581.102983857, "rt":2.37, "ut":0.05, "st":0.03}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1722949580.577079265}
-{"VCS_COMP_START_TIME": 1722949580.577079265}
-{"VCS_COMP_END_TIME": 1722949585.734269995}
-{"VCS_USER_OPTIONS": "-sverilog -kdb +v2k -debug_access+all -debug_all -full64 -timescale=1ns/1ns -l com.log -f /home/xuemengyuan/try/cache_v1/icache/icache_filelist.f -R +WAVE"}
